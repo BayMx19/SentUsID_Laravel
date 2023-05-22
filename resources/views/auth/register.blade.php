@@ -62,10 +62,10 @@
 
         .card {
             width: 400px !important;
-            height: 450px !important;
+            height: 600px !important;
             position: absolute;
             justify-content: center !important;
-            top: 11%;
+            top: 3%;
         }
 
         .form-login {
@@ -154,7 +154,15 @@
                                     <input type="text" class="form-control form-login mt-2" id="userName"
                                         placeholder="Masukkan Username" required autocomplete="off">
 
+                                    <label for="email" class="label-form mt-3 mb-1">Email</label>
+                                    <input type="text" class="form-control form-login mt-2" id="email"
+                                        placeholder="Masukkan Email" required autocomplete="off">
+
                                     <label for="password" class="label-form mt-3 mb-1">Password</label>
+                                    <input type="password" class="form-control form-login mt-2" id="password"
+                                        placeholder="Masukkan Password" required autocomplete="off">
+
+                                    <label for="password" class="label-form mt-3 mb-1">Confirm Password</label>
                                     <input type="password" class="form-control form-login mt-2" id="password"
                                         placeholder="Masukkan Password" required autocomplete="off">
 
