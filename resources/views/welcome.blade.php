@@ -115,7 +115,7 @@
 
         .btn {
             background-color: #00337C;
-            border: none;
+            border: 2px solid transparent;
             border-radius: 10px;
             color: white;
         }
