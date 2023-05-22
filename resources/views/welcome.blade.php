@@ -1,3 +1,4 @@
+@section('title', 'Welcome!')
 <!DOCTYPE html>
 <html>
 
@@ -9,7 +10,7 @@
     <link rel="dns-prefetch" href="//fonts.gstatic.com">
     <link href="https://fonts.bunny.net/css?family=Nunito" rel="stylesheet">
 
-    <title>SentUs - Layanan Pengelola Percetakan</title>
+    <title>SentUs - @yield('title')</title>
     <link rel="icon" href="img/Logo.png">
     <link rel="stylesheet" type="text/css" href="css/style.css">
     <link rel="stylesheet" type="text/css" href="css/default-css.css">
@@ -72,7 +73,7 @@
         }
 
         #mainNav {
-           
+
             background-color: #fff;
         }
 
