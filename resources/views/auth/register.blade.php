@@ -170,7 +170,7 @@
 
 
                                     <div class="d-grid gap-2">
-                                        <router-link to="/dashboard" tag="button" class="btn-login">Login
+                                        <router-link to="/dashboard" tag="button" class="btn-login">Register
                                         </router-link>
 
                                     </div>
