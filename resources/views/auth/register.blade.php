@@ -157,11 +157,11 @@
                             <div class="row login-form">
                                 <form method="POST" action="{{ route('register') }}">
                                     @csrf
-                                    <label for="userName" class="label-form mb-1">Username</label>
+                                    <label for="username" class="label-form mb-1">Username</label>
                                     <input type="text"
                                         class="form-control form-login mt-2 @error('username') is-invalid @enderror"
                                         id="username" placeholder="Masukkan Username" name="username" required
-                                        autocomplete="username" autofocus>
+                                        autocomplete="username">
 
                                     @error('username')
                                         <span class="invalid-feedback" role="alert">
@@ -197,8 +197,7 @@
                                         autocomplete="off">
 
                                     <input type="hidden" class="form-control form-login mt-2" id="user_role"
-                                        placeholder="Masukkan Password" name="user_role" value="User" required
-                                        autocomplete="off">
+                                        placeholder="Masukkan Password" name="user_role" value="User" required>
 
                                     <br>
 
