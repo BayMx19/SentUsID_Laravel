@@ -134,6 +134,12 @@
                 bottom: 25%;
             }
         }
+
+        .footer-text {
+            font-family: "Nunito", sans-serif !important;
+            font-size: 12px !important;
+            font-weight: bold;
+        }
     </style>
 
 </head>
@@ -175,6 +181,9 @@
 
                                     </div>
                                 </form>
+                                <p class="footer-text mt-2">Sudah Punya Akun? <a href="{{ '/login' }}">Masuk</a>
+                                </p>
+
                             </div>
                         </div>
                     </div>

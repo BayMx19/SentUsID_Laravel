@@ -134,6 +134,12 @@
                 bottom: 25%;
             }
         }
+
+        .footer-text {
+            font-family: "Nunito", sans-serif !important;
+            font-size: 12px !important;
+            font-weight: bold;
+        }
     </style>
 
 </head>
@@ -167,6 +173,7 @@
 
                                     </div>
                                 </form>
+                                <p class="footer-text mt-2">Belum Punya Akun? <a href="{{ '/register' }}">Daftar</a></p>
                             </div>
                         </div>
                     </div>

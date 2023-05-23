@@ -305,7 +305,7 @@
         .btn-header {
             color: #00337C;
             background-color: white;
-            border: none;
+            border: 2px solid transparent;
             padding: 10px;
             border-radius: 1rem !important;
             font-weight: 700;
@@ -316,12 +316,14 @@
         .btn-header:hover {
             color: white;
             background-color: #00337C;
+            border: 2px solid transparent;
+
         }
 
         .btn-footer {
             color: white;
             background-color: #00337C;
-            border: none;
+            border: 2px solid transparent;
             padding: 10px;
             border-radius: 1rem !important;
             font-weight: 700;
@@ -479,9 +481,12 @@
                         <li class="nav-item"><a class="nav-link me-lg-3" href="#contact">Hubungi Kami</a></li>
                     </ul>
 
-                    <router-link to="/login" tag="button" class="btn btn-primary px-3 mb-2 mb-lg-0">
+                    {{-- <router-link to="/login" tag="button" class="btn btn-primary px-3 mb-2 mb-lg-0">
                         Bergabung Sekarang!
-                    </router-link>
+                    </router-link> --}}
+
+                    <a href="{{ '/register' }}"><button class="btn btn-primary px-3 mb-2 mb-lg-0">Bergabung
+                            Sekarang!</button></a>
 
                 </div>
             </div>
@@ -494,9 +499,10 @@
                             <h1 class="header-text1 lh-1 mb-3">Welcome to SentUs!</h1>
                             <p class="header-text2 mb-5">Website Layanan Percetakan untuk Efisiensi Anda</p>
                             <div class="d-grid gap-2 col-6  flex-column flex-lg-row align-items-center">
-                                <router-link to="/login" tag="button" class="btn-header">
-                                    Bergabung Sekarang!
-                                </router-link>
+
+                                <a href="{{ '/register' }}"><button class="btn-header px-3 mb-2 mb-lg-0">Bergabung
+                                        Sekarang!</button></a>
+
                             </div>
                         </div>
                     </div>
@@ -601,9 +607,9 @@
                                 mencetak dokumen mereka dengan cepat dan efisien.</p>
                             <div class="d-grid gap-2 col-6  flex-column flex-lg-row align-items-center">
 
-                                <router-link to="/login" tag="button" class="btn-footer">
-                                    Bergabung Sekarang!
-                                </router-link>
+                                <a href="{{ '/register' }}"><button class="btn-footer px-3 mb-2 mb-lg-0">Bergabung
+                                        Sekarang!</button></a>
+
                             </div>
                         </div>
                     </div>
