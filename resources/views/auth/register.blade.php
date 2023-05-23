@@ -155,29 +155,57 @@
                         </div>
                         <div class="container">
                             <div class="row login-form">
-                                <form>
+                                <form method="POST" action="{{ route('register') }}">
+                                    @csrf
                                     <label for="userName" class="label-form mb-1">Username</label>
-                                    <input type="text" class="form-control form-login mt-2" id="userName"
-                                        placeholder="Masukkan Username" required autocomplete="off">
+                                    <input type="text"
+                                        class="form-control form-login mt-2 @error('name') is-invalid @enderror"
+                                        id="name" placeholder="Masukkan Username" name="name" required
+                                        autocomplete="name" autofocus>
+
+                                    @error('name')
+                                        <span class="invalid-feedback" role="alert">
+                                            <strong>{{ $message }}</strong>
+                                        </span>
+                                    @enderror
 
                                     <label for="email" class="label-form mt-3 mb-1">Email</label>
-                                    <input type="text" class="form-control form-login mt-2" id="email"
-                                        placeholder="Masukkan Email" required autocomplete="off">
+                                    <input type="text"
+                                        class="form-control form-login mt-2 @error('email') is-invalid @enderror"
+                                        id="email" placeholder="Masukkan Email" name="email" required
+                                        autocomplete="email">
+                                    @error('email')
+                                        <span class="invalid-feedback" role="alert">
+                                            <strong>{{ $message }}</strong>
+                                        </span>
+                                    @enderror
 
                                     <label for="password" class="label-form mt-3 mb-1">Password</label>
-                                    <input type="password" class="form-control form-login mt-2" id="password"
-                                        placeholder="Masukkan Password" required autocomplete="off">
+                                    <input type="password"
+                                        class="form-control form-login mt-2 @error('password') is-invalid @enderror"
+                                        id="password" placeholder="Masukkan Password" name="password" required
+                                        autocomplete="new-password">
+                                    @error('password')
+                                        <span class="invalid-feedback" role="alert">
+                                            <strong>{{ $message }}</strong>
+                                        </span>
+                                    @enderror
 
                                     <label for="password" class="label-form mt-3 mb-1">Confirm Password</label>
-                                    <input type="password" class="form-control form-login mt-2" id="password"
-                                        placeholder="Masukkan Password" required autocomplete="off">
+                                    <input type="password" class="form-control form-login mt-2" id="password-confirm"
+                                        placeholder="Masukkan Password" name="password_confirmation" required
+                                        autocomplete="off">
 
+                                    <input type="hidden" class="form-control form-login mt-2" id="role"
+                                        placeholder="Masukkan Password" name="role" value="user" required
+                                        autocomplete="off">
+                                        
                                     <br>
 
 
                                     <div class="d-grid gap-2">
-                                        <router-link to="/dashboard" tag="button" class="btn-login">Register
-                                        </router-link>
+
+                                        <button type="submit" class="btn-login">Register</button>
 
                                     </div>
                                 </form>
