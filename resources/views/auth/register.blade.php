@@ -159,11 +159,11 @@
                                     @csrf
                                     <label for="userName" class="label-form mb-1">Username</label>
                                     <input type="text"
-                                        class="form-control form-login mt-2 @error('name') is-invalid @enderror"
-                                        id="name" placeholder="Masukkan Username" name="name" required
-                                        autocomplete="name" autofocus>
+                                        class="form-control form-login mt-2 @error('username') is-invalid @enderror"
+                                        id="username" placeholder="Masukkan Username" name="username" required
+                                        autocomplete="username" autofocus>
 
-                                    @error('name')
+                                    @error('username')
                                         <span class="invalid-feedback" role="alert">
                                             <strong>{{ $message }}</strong>
                                         </span>
@@ -196,10 +196,10 @@
                                         placeholder="Masukkan Password" name="password_confirmation" required
                                         autocomplete="off">
 
-                                    <input type="hidden" class="form-control form-login mt-2" id="role"
-                                        placeholder="Masukkan Password" name="role" value="user" required
+                                    <input type="hidden" class="form-control form-login mt-2" id="user_role"
+                                        placeholder="Masukkan Password" name="user_role" value="User" required
                                         autocomplete="off">
-                                        
+
                                     <br>
 
 
