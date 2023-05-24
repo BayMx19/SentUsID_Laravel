@@ -16,7 +16,7 @@
                                         <div class="form-group">
                                             <label for="example-text-input" class="col-form-label">Nama</label>
                                             <input class="form-control" type="text"
-                                                placeholder="{{ session()->get('username') }}" id="example-text-input"
+                                                placeholder="{{ Session::get('username') }}" id="example-text-input"
                                                 readonly>
                                         </div>
                                         <div class="form-group">
