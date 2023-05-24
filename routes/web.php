@@ -26,5 +26,23 @@ Route::get('/logout', [LoginController::class, 'logout']);
 Route::get('/akun', function(){
     return view('akun');
 });
+Route::get('/history', function(){
+    return view('history');
+});
+Route::get('/mitra', function(){
+    return view('mitra');
+});
+Route::get('/pesanan', function(){
+    return view('pesanan');
+});
+Route::get('/produk', function(){
+    return view('produk');
+});
+Route::get('/toko', function(){
+    return view('toko');
+});
+Route::get('/users', function(){
+    return view('users');
+});
 
 
