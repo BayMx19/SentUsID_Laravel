@@ -16,12 +16,14 @@
                                         <div class="form-group">
                                             <label for="example-text-input" class="col-form-label">Nama</label>
                                             <input class="form-control" type="text" value="{{ Auth::user()->username }}"
-                                                id="example-text-input" readonly>
+                                                id="example-text-input" disabled readonly oncopy="return false;"
+                                                onpaste="return false;">
                                         </div>
                                         <div class="form-group">
                                             <label for="example-search-input" class="col-form-label">Email</label>
                                             <input class="form-control" type="search" value="{{ Auth::user()->email }}"
-                                                id="example-search-input" readonly>
+                                                id="example-search-input" disabled readonly oncopy="return false;"
+                                                onpaste="return false;">
                                         </div>
 
 

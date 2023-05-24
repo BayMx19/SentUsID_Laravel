@@ -17,8 +17,8 @@
 
 
 
-                                            <table class="table datatable-primary text-center myDatamaster"
-                                                id="myDatamaster">
+                                            <table class="table datatable-primary text-center myDatausers display"
+                                                id="myDatausers">
                                                 <thead class="text-uppercase bg-primary">
                                                     <tr class="text-white">
                                                         <th scope="col">User ID</th>
