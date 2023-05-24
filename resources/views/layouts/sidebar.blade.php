@@ -110,15 +110,15 @@
              </ul>-->
                 <ul class="metismenu2" id="menu">
                     <li>
-                        <router-link to="/logout" aria-expanded="true"><svg xmlns="http://www.w3.org/2000/svg"
-                                width="16" height="16" fill="currentColor" class="bi bi-power"
-                                viewBox="0 0 16 16">
+                        <a href="{{ '/logout' }}">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                fill="currentColor" class="bi bi-power" viewBox="0 0 16 16">
                                 <path d="M7.5 1v7h1V1h-1z" />
                                 <path
                                     d="M3 8.812a4.999 4.999 0 0 1 2.578-4.375l-.485-.874A6 6 0 1 0 11 3.616l-.501.865A5 5 0 1 1 3 8.812z" />
                             </svg>
-                            <span style="margin-left: 10px;">Keluar</span>
-                        </router-link>
+                            <span style="margin-left: 10px;">Keluar</span></a>
+
 
                     </li>
                 </ul>

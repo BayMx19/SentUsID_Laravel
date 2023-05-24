@@ -155,25 +155,27 @@
                         </div>
                         <div class="container">
                             <div class="row login-form">
-                                <form>
+                                <form method="POST" action="{{ route('login') }}">
+                                    @csrf
                                     <label for="userName" class="label-form mb-1">Username</label>
                                     <input type="text" class="form-control form-login mt-2" id="userName"
-                                        placeholder="Masukkan Username" required autocomplete="off">
+                                        placeholder="Masukkan Username" name="email" required autocomplete="off">
 
                                     <label for="password" class="label-form mt-3 mb-1">Password</label>
                                     <input type="password" class="form-control form-login mt-2" id="password"
-                                        placeholder="Masukkan Password" required autocomplete="off">
+                                        placeholder="Masukkan Password" name="password" required autocomplete="off">
 
                                     <br>
 
 
                                     <div class="d-grid gap-2">
-                                        <router-link to="/dashboard" tag="button" class="btn-login">Login
-                                        </router-link>
+
+                                        <button type="submit" class="btn-login">Login</button>
 
                                     </div>
                                 </form>
-                                <p class="footer-text mt-2">Belum Punya Akun? <a href="{{ '/register' }}">Daftar</a></p>
+                                <p class="footer-text mt-2">Belum Punya Akun? <a href="{{ '/register' }}">Daftar</a>
+                                </p>
                             </div>
                         </div>
                     </div>
