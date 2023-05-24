@@ -433,7 +433,7 @@ height: 50px !important;
  font-weight: bold;
  font-style: normal;
  letter-spacing: 0;
- color:  #0068D5;
+ color:  #005C97;
  text-transform: capitalize;
  margin-bottom: 17px;
 }
@@ -730,8 +730,10 @@ p.card-text {
 
 .form-control {
  font-size: 14px;
- border: 1px solid #0068D4;
-
+ border: 1px solid #005C97;
+width: 100%;
+height: 30px;
+margin-bottom: 25px;
 
  border-radius: 12px;
 }
@@ -758,7 +760,7 @@ p.card-text {
 
 label {
  font-weight: 500;
- color: #0068D4;
+ color: #005C97;
  display: inline-block;
  margin-bottom: 8px;
  margin-bottom: .5rem;
@@ -888,7 +890,7 @@ label {
 
 .table th {
     padding: 0.25rem;
-    background-color: #0068D5 !important;
+    background-color: #005C97 !important;
 }
 
 table tr th {
@@ -941,7 +943,7 @@ div.dataTables_wrapper div.dataTables_filter {
 /* datatable-primary */
 
 .datatable-primary thead {
- background: #0068D5;
+ background: #005C97;
  color: #fff;
  border-radius: 12px;
 padding: 0.25rem !important;
@@ -1554,5 +1556,5 @@ table.dataTable thead td {
 
   .vue3-easy-data-table thead {
     color: #fff;
-    background-color: #0068D5;
+    background-color: #005C97;
   }

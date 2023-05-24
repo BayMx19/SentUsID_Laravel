@@ -16,14 +16,12 @@
                                         <div class="form-group">
                                             <label for="example-text-input" class="col-form-label">Nama</label>
                                             <input class="form-control" type="text"
-                                                placeholder="{{ Session::get('username') }}" id="example-text-input"
-                                                readonly>
+                                                value="{{ Session::get('username') }}" id="example-text-input" readonly>
                                         </div>
                                         <div class="form-group">
                                             <label for="example-search-input" class="col-form-label">Email</label>
-                                            <input class="form-control" type="search"
-                                                placeholder="{{ session()->get('email') }}" id="example-search-input"
-                                                readonly>
+                                            <input class="form-control" type="search" value="{{ Session::get('email') }}"
+                                                id="example-search-input" readonly>
                                         </div>
 
 
