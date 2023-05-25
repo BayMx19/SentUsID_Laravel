@@ -15,7 +15,7 @@
                                         <div class="button-tambah">
                                             <a href="{{ 'tambah-karyawan' }}"><button class="btn btn-primary"
                                                     style="float:right;">Tambah
-                                                    Karyawan</button></a> <br>
+                                                    Pengguna</button></a> <br>
                                         </div>
                                         <div class="data-tables datatable-primary table-responsive">
 
