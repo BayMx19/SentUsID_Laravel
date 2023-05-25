@@ -15,13 +15,15 @@
 
                                         <div class="form-group">
                                             <label for="example-text-input" class="col-form-label">Nama</label>
-                                            <input class="form-control" type="text"
-                                                value="{{ Session::get('username') }}" id="example-text-input" readonly>
+                                            <input class="form-control" type="text" value="{{ Auth::user()->username }}"
+                                                id="example-text-input" disabled readonly oncopy="return false;"
+                                                onpaste="return false;">
                                         </div>
                                         <div class="form-group">
                                             <label for="example-search-input" class="col-form-label">Email</label>
-                                            <input class="form-control" type="search" value="{{ Session::get('email') }}"
-                                                id="example-search-input" readonly>
+                                            <input class="form-control" type="search" value="{{ Auth::user()->email }}"
+                                                id="example-search-input" disabled readonly oncopy="return false;"
+                                                onpaste="return false;">
                                         </div>
 
 

@@ -12,7 +12,7 @@
 
     <title>SentUs - @yield('title')</title>
     <link rel="icon" href="img/Logo.png">
-    <link rel="stylesheet" type="text/css" href="css/style.css">
+    {{-- <link rel="stylesheet" type="text/css" href="css/style.css"> --}}
     <link rel="stylesheet" type="text/css" href="css/default-css.css">
     <link rel="stylesheet" type="text/css" href="css/metisMenu.css">
     <link rel="stylesheet" type="text/css" href="css/slicknav.min.css">
@@ -66,6 +66,7 @@
             position: absolute;
             justify-content: center !important;
             top: 3%;
+            border-radius: 10px;
         }
 
         .form-login {

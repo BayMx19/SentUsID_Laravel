@@ -12,7 +12,7 @@
 
     <title>SentUs - @yield('title')</title>
     <link rel="icon" href="img/Logo.png">
-    <link rel="stylesheet" type="text/css" href="css/style.css">
+    {{-- <link rel="stylesheet" type="text/css" href="css/style.css"> --}}
     <link rel="stylesheet" type="text/css" href="css/default-css.css">
     <link rel="stylesheet" type="text/css" href="css/metisMenu.css">
     <link rel="stylesheet" type="text/css" href="css/slicknav.min.css">
@@ -66,11 +66,9 @@
             position: absolute;
             justify-content: center !important;
             top: 11%;
+            border-radius: 10px;
         }
 
-        .form-login {
-            border-radius: 1rem;
-        }
 
         .btn-login {
             color: white;
@@ -157,7 +155,11 @@
                             <div class="row login-form">
                                 <form method="POST" action="{{ route('login') }}">
                                     @csrf
+<<<<<<< HEAD
                                     <label for="Email" class="label-form mb-1">Email</label>
+=======
+                                    <label for="userName" class="label-form mb-1">Email</label>
+>>>>>>> fb6c3e628b902f4b3257602a4c2cd8567abb327b
                                     <input type="text" class="form-control form-login mt-2" id="userName"
                                         placeholder="Masukkan Email" name="email" required autocomplete="off">
 
