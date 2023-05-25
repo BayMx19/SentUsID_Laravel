@@ -518,6 +518,16 @@ height: 50px !important;
  font-size: 13px;
  letter-spacing: 0;
  border-radius: 12px;
+ color: white;
+ border: 2px solid transparent;
+ font-family: "Nunito", sans-serif !important;
+}
+
+.btn:hover{
+  color: #005C97;
+  background-color: white;
+  border: 2px solid #005C97;
+  font-weight: bold;
 }
 .btn2 {
   color: white;
@@ -539,7 +549,7 @@ height: 50px !important;
    }
 
 .btn-primary {
-    background-color: #0068D4;
+    background-color: #005c97;
 }
 .btn-danger{
  background-color: #FF3232 !important;
