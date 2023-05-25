@@ -21,7 +21,7 @@ Route::get('/', function () {
 
 Auth::routes();
 
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+// Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 Route::get('/logout', [LoginController::class, 'logout']);
 Route::get('/akun', function(){
     return view('akun');
@@ -44,5 +44,26 @@ Route::get('/toko', function(){
 Route::get('/users', function(){
     return view('users');
 });
+Route::get('user.dashboard', function(){
+    return view('user.dashboard');
+});
+Route::get('mitra.dashboard', function(){
+    return view('mitra.dashboard');
+});
 
+Route::get('/home', function () {
+    if (Auth::check()) {
+        if (Auth::user()->user_role == 'Admin') {
+            return redirect('mitra.dashboard');
+        } elseif (Auth::user()->user_role == 'User') {
+            return redirect('user.dashboard');
+        } elseif (Auth::user()->user_role == 'SuperAdmin') {
+            return redirect('superadmin/dashboard');
+        }
+    }
+
+    // Jika tidak ada pengguna yang masuk atau peran tidak sesuai, 
+    // Anda dapat mengarahkan ke rute default seperti berikut:
+    return redirect('/');
+})->middleware('auth')->name('home');
 

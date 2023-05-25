@@ -157,9 +157,9 @@
                             <div class="row login-form">
                                 <form method="POST" action="{{ route('login') }}">
                                     @csrf
-                                    <label for="userName" class="label-form mb-1">Username</label>
+                                    <label for="Email" class="label-form mb-1">Email</label>
                                     <input type="text" class="form-control form-login mt-2" id="userName"
-                                        placeholder="Masukkan Username" name="email" required autocomplete="off">
+                                        placeholder="Masukkan Email" name="email" required autocomplete="off">
 
                                     <label for="password" class="label-form mt-3 mb-1">Password</label>
                                     <input type="password" class="form-control form-login mt-2" id="password"
