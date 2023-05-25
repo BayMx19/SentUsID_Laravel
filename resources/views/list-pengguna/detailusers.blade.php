@@ -18,18 +18,40 @@
                                                 <path fill-rule="evenodd"
                                                     d="M15 8a.5.5 0 0 0-.5-.5H2.707l3.147-3.146a.5.5 0 1 0-.708-.708l-4 4a.5.5 0 0 0 0 .708l4 4a.5.5 0 0 0 .708-.708L2.707 8.5H14.5A.5.5 0 0 0 15 8z" />
                                             </svg></a> Detail Users</h4>
-                                        <div class="form-group">
-                                            <label for="example-text-input" class="col-form-label">Nama</label>
-                                            <input class="form-control" type="text" value="{{ Auth::user()->username }}"
-                                                id="example-text-input" disabled readonly oncopy="return false;"
-                                                onpaste="return false;">
-                                        </div>
-                                        <div class="form-group">
-                                            <label for="example-search-input" class="col-form-label">Email</label>
-                                            <input class="form-control" type="search" value="{{ Auth::user()->email }}"
-                                                id="example-search-input" disabled readonly oncopy="return false;"
-                                                onpaste="return false;">
-                                        </div>
+
+                                        <form>
+                                            {{ csrf_field() }}
+                                            <div class="form-group">
+                                                <label for="example-text-input" class="col-form-label">Username</label>
+                                                <input class="form-control" type="text" value=""
+                                                    id="example-text-input">
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="example-text-input" class="col-form-label">Email</label>
+                                                <input class="form-control" type="text" value=""
+                                                    id="example-text-input">
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="example-text-input" class="col-form-label">Role</label>
+                                                <input class="form-control" type="text" value=""
+                                                    id="example-text-input">
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="example-text-input" class="col-form-label">Alamat</label>
+                                                <input class="form-control" type="text" value=""
+                                                    id="example-text-input">
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="example-text-input" class="col-form-label">Nomor Telepon</label>
+                                                <input class="form-control " type="text" value=""
+                                                    id="example-text-input">
+                                            </div>
+                                            <br>
+                                            <div class="d-grid gap-2 col-6 mx-auto">
+                                                <a href="{{ '' }}"><button type="submit"
+                                                        class="btn4 btn-primary">Simpan</button></a>
+                                            </div>
+                                        </form>
                                 </div>
                             </div>
                         </div>
