@@ -27,22 +27,22 @@ Route::get('/akun', function(){
     return view('akun');
 });
 Route::get('/history', function(){
-    return view('history');
+    return view('list-history.history');
 });
 Route::get('/mitra', function(){
-    return view('mitra');
+    return view('list-mitra.mitra');
 });
 Route::get('/pesanan', function(){
-    return view('pesanan');
+    return view('list-pesanan.pesanan');
 });
 Route::get('/produk', function(){
-    return view('produk');
+    return view('list-produk.produk');
 });
 Route::get('/toko', function(){
-    return view('toko');
+    return view('list-toko.toko');
 });
 Route::get('/users', function(){
-    return view('users');
+    return view('list-pengguna.users');
 });
 Route::get('dashboard-user', function(){
     return view('user.dashboard');
