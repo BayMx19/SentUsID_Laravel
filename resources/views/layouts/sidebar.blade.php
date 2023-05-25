@@ -10,14 +10,44 @@
             <nav>
 
                 <ul class="metismenu" id="menu">
-                    <li class="{{ request()->is('home') ? 'active' : '' }}">
+                    {{-- <li class="{{ request()->is('home') ? 'active' : '' }}">
                         <a href="{{ '/home' }}" aria-expanded="true"><svg xmlns="http://www.w3.org/2000/svg"
                                 width="16" height="16" fill="currentColor" class="bi bi-columns"
                                 viewBox="0 0 16 16">
                                 <path
                                     d="M0 2a1 1 0 0 1 1-1h14a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H1a1 1 0 0 1-1-1V2zm8.5 0v8H15V2H8.5zm0 9v3H15v-3H8.5zm-1-9H1v3h6.5V2zM1 14h6.5V6H1v8z" />
                             </svg><span>Dashboard</span></a>
-                    </li>
+                    </li> --}}
+                    @if (auth()->check())
+                        @if (auth()->user()->user_role == 'Admin')
+                            <li class="{{ request()->is('dashboard-mitra') ? 'active' : '' }}">
+                                <a href="{{ url('dashboard-mitra') }}" aria-expanded="true"><svg
+                                        xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                        fill="currentColor" class="bi bi-columns" viewBox="0 0 16 16">
+                                        <path
+                                            d="M0 2a1 1 0 0 1 1-1h14a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H1a1 1 0 0 1-1-1V2zm8.5 0v8H15V2H8.5zm0 9v3H15v-3H8.5zm-1-9H1v3h6.5V2zM1 14h6.5V6H1v8z" />
+                                    </svg><span>Dashboard</span></a>
+                            </li>
+                        @elseif(auth()->user()->user_role == 'SuperAdmin')
+                            <li class="{{ request()->is('dashboard-superadmin') ? 'active' : '' }}">
+                                <a href="{{ url('dashboard-superadmin') }}" aria-expanded="true"><svg
+                                        xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                        fill="currentColor" class="bi bi-columns" viewBox="0 0 16 16">
+                                        <path
+                                            d="M0 2a1 1 0 0 1 1-1h14a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H1a1 1 0 0 1-1-1V2zm8.5 0v8H15V2H8.5zm0 9v3H15v-3H8.5zm-1-9H1v3h6.5V2zM1 14h6.5V6H1v8z" />
+                                    </svg><span>Dashboard</span></a>
+                            </li>
+                        @elseif(auth()->user()->user_role == 'User')
+                            <li class="{{ request()->is('dashboard-user') ? 'active' : '' }}">
+                                <a href="{{ url('dashboard-user') }}" aria-expanded="true"><svg
+                                        xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                        fill="currentColor" class="bi bi-columns" viewBox="0 0 16 16">
+                                        <path
+                                            d="M0 2a1 1 0 0 1 1-1h14a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H1a1 1 0 0 1-1-1V2zm8.5 0v8H15V2H8.5zm0 9v3H15v-3H8.5zm-1-9H1v3h6.5V2zM1 14h6.5V6H1v8z" />
+                                    </svg><span>Dashboard</span></a>
+                            </li>
+                        @endif
+                    @endif
                     @if (Auth::user()->user_role == 'SuperAdmin')
                         <li class="{{ request()->is('users') ? 'active' : '' }}">
                             <a href="{{ '/users' }}" aria-expanded="true"><svg xmlns="http://www.w3.org/2000/svg"
@@ -102,8 +132,8 @@
                 <ul class="metismenu2" id="menu">
                     <li>
                         <a href="{{ '/logout' }}">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
-                                class="bi bi-power" viewBox="0 0 16 16">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                fill="currentColor" class="bi bi-power" viewBox="0 0 16 16">
                                 <path d="M7.5 1v7h1V1h-1z" />
                                 <path
                                     d="M3 8.812a4.999 4.999 0 0 1 2.578-4.375l-.485-.874A6 6 0 1 0 11 3.616l-.501.865A5 5 0 1 1 3 8.812z" />
