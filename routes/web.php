@@ -52,7 +52,7 @@ Route::get('dashboard-mitra', function(){
 });
 
 Route::get('dashboard-superadmin', function(){
-    return view('mitra.dashboard');
+    return view('superadmin.dashboard');
 });
 Route::get('/home', function () {
     if (Auth::check()) {
@@ -64,8 +64,7 @@ Route::get('/home', function () {
             return redirect('dashboard-superadmin');
         }
     }
-
-    return redirect('/');
+    return redirect("/");
 })->middleware('auth')->name('home');
 
 Route::middleware(['checkUserRole'])->group(function () {

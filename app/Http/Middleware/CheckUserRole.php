@@ -18,9 +18,9 @@ class CheckUserRole
         if (auth()->check()) {
             $userRole = auth()->user()->user_role;
             
-            if ($userRole == 'Admin' && $request->is('dashboard-user') || $request->is('dashboard-superadmin')) {
+            if ($userRole == 'Admin' && ($request->is('dashboard-user') || $request->is('dashboard-superadmin'))) {
                 return redirect('dashboard-mitra');
-            } elseif ($userRole == 'User' && $request->is('dashboard-mitra') || $request->is('dashboard-superadmin')) {
+            } elseif ($userRole == 'User' && ($request->is('dashboard-mitra') || $request->is('dashboard-superadmin'))) {
                 return redirect('dashboard-user');
             } elseif ($userRole == 'SuperAdmin' && ($request->is('dashboard-user') || $request->is('dashboard-mitra'))) {
                 return redirect('dashboard-superadmin');}
