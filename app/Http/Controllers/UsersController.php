@@ -7,6 +7,9 @@ use Illuminate\Support\Facades\DB;
 
 class UsersController extends Controller
 {
+    public function index(){
+        return view('list-pengguna.users');
+    }
     public function pengguna() {
         $users = DB::table('users')->get();
 
