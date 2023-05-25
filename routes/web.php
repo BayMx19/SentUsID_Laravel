@@ -24,29 +24,54 @@ Auth::routes();
 
 // Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 Route::get('/logout', [LoginController::class, 'logout']);
+
+// Start Route Akun
 Route::get('/akun', function(){
     return view('akun');
 });
+// END Route Akun
+
+// Start Route History
 Route::get('/history', function(){
     return view('list-history.history');
 });
+// END Route History
+// Start Route List Mitra
 Route::get('/mitra', function(){
     return view('list-mitra.mitra');
 });
+// END Route List Mitra
+// Start Route List Pesanan
 Route::get('/pesanan', function(){
     return view('list-pesanan.pesanan');
 });
+// END Route List Pesanan
+// Start Route List Produk
 Route::get('/produk', function(){
     return view('list-produk.produk');
 });
+// END Route List Produk
+// Start Route List Toko
 Route::get('/toko', function(){
     return view('list-toko.toko');
 });
+// END Route List Toko
+// Start Route List Pengguna
 Route::get('/users', function(){
     return view('list-pengguna.users');
 });
 
+
+Route::get('/detail-users', function() {
+    return view('list-pengguna.detailusers');
+});
+
+
+// END Route List Pengguna
+
 Route::get('users',[UsersController::class, 'pengguna'])->name('users');
+
+// Start Route Authentication
 Route::get('dashboard-user', function(){
     return view('user.dashboard');
 });
@@ -76,8 +101,10 @@ Route::middleware(['checkUserRole'])->group(function () {
     Route::view('dashboard-superadmin', 'superadmin.dashboard');
 });
 
+// END Route Authentication
 
 
+// SELESAI SEMOGA HARIMU SENIN TERUS, KEJARLAH CITA-CITAMU JANGAN KEJAR YANG GA CINTAIMU
 
 
 

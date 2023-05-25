@@ -13,16 +13,15 @@ return new class extends Migration
     public function up(): void
     {
         Schema::create('users', function (Blueprint $table) {
-            $table->id('id_user');
+            $table->increments('id_users');
             $table->string('username');
             $table->string('email')->unique();
             $table->string('password');
             $table->string('user_role');
-            $table->rememberToken('token')->nullable();
-            $table->timestamp('created_at')->nullable();
-            $table->timestamp('update_at')->nullable();
-            $table->decimal('no_telpon', $precision = 13)->nullable();
             $table->string('alamat')->nullable();
+            $table->string('no_telp')->nullable();
+            $table->rememberToken('token')->nullable();
+            $table->timestamp('created_at');
         });
     }
 
