@@ -42,9 +42,18 @@ Route::get('/produk', function(){
 Route::get('/toko', function(){
     return view('list-toko.toko');
 });
+
+// Route untuk Users
 Route::get('/users', function(){
     return view('list-pengguna.users');
 });
+
+Route::get('/detail-users', function() {
+    return view('list-pengguna.detailusers');
+});
+
+
+// Route untuk Users
 
 Route::get('users',[UsersController::class, 'pengguna'])->name('users');
 Route::get('dashboard-user', function(){
