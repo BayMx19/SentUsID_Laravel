@@ -54,32 +54,24 @@ Route::get('dashboard-mitra', function(){
 Route::get('dashboard-superadmin', function(){
     return view('mitra.dashboard');
 });
-// Route::get('/home', function () {
-//     if (Auth::check()) {
-//         if (Auth::user()->user_role == 'Admin') {
-//             return redirect('dashboard-mitra');
-//         } elseif (Auth::user()->user_role == 'User') {
-//             return redirect('dashboard-user');
-//         } elseif (Auth::user()->user_role == 'SuperAdmin') {
-//             return redirect('dashboard-superadmin');
-//         }
-//     }
+Route::get('/home', function () {
+    if (Auth::check()) {
+        if (Auth::user()->user_role == 'Admin') {
+            return redirect('dashboard-mitra');
+        } elseif (Auth::user()->user_role == 'User') {
+            return redirect('dashboard-user');
+        } elseif (Auth::user()->user_role == 'SuperAdmin') {
+            return redirect('dashboard-superadmin');
+        }
+    }
 
-//     return redirect('/');
-// })->middleware('auth')->name('home');
+    return redirect('/');
+})->middleware('auth')->name('home');
 
 Route::middleware(['checkUserRole'])->group(function () {
-    Route::get('dashboard-user', function(){
-        return view('user.dashboard');
-    });
-    
-    Route::get('dashboard-mitra', function(){
-        return view('mitra.dashboard');
-    });
-    
-    Route::get('dashboard-superadmin', function(){
-        return view('superadmin.dashboard');
-    });
+    Route::view('dashboard-user', 'user.dashboard');
+    Route::view('dashboard-mitra', 'mitra.dashboard');
+    Route::view('dashboard-superadmin', 'superadmin.dashboard');
 });
 
 
