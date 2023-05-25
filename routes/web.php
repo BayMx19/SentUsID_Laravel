@@ -44,26 +44,47 @@ Route::get('/toko', function(){
 Route::get('/users', function(){
     return view('users');
 });
-Route::get('user.dashboard', function(){
+Route::get('dashboard-user', function(){
     return view('user.dashboard');
 });
-Route::get('mitra.dashboard', function(){
+Route::get('dashboard-mitra', function(){
     return view('mitra.dashboard');
 });
 
-Route::get('/home', function () {
-    if (Auth::check()) {
-        if (Auth::user()->user_role == 'Admin') {
-            return redirect('mitra.dashboard');
-        } elseif (Auth::user()->user_role == 'User') {
-            return redirect('user.dashboard');
-        } elseif (Auth::user()->user_role == 'SuperAdmin') {
-            return redirect('superadmin/dashboard');
-        }
-    }
+Route::get('dashboard-superadmin', function(){
+    return view('mitra.dashboard');
+});
+// Route::get('/home', function () {
+//     if (Auth::check()) {
+//         if (Auth::user()->user_role == 'Admin') {
+//             return redirect('dashboard-mitra');
+//         } elseif (Auth::user()->user_role == 'User') {
+//             return redirect('dashboard-user');
+//         } elseif (Auth::user()->user_role == 'SuperAdmin') {
+//             return redirect('dashboard-superadmin');
+//         }
+//     }
 
-    // Jika tidak ada pengguna yang masuk atau peran tidak sesuai, 
-    // Anda dapat mengarahkan ke rute default seperti berikut:
-    return redirect('/');
-})->middleware('auth')->name('home');
+//     return redirect('/');
+// })->middleware('auth')->name('home');
+
+Route::middleware(['checkUserRole'])->group(function () {
+    Route::get('dashboard-user', function(){
+        return view('user.dashboard');
+    });
+    
+    Route::get('dashboard-mitra', function(){
+        return view('mitra.dashboard');
+    });
+    
+    Route::get('dashboard-superadmin', function(){
+        return view('superadmin.dashboard');
+    });
+});
+
+
+
+
+
+
 
