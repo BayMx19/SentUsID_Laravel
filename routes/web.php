@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\UsersController;
 use App\Http\Controllers\Auth\LoginController;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
@@ -44,6 +45,8 @@ Route::get('/toko', function(){
 Route::get('/users', function(){
     return view('list-pengguna.users');
 });
+
+Route::get('users',[UsersController::class, 'pengguna'])->name('users');
 Route::get('dashboard-user', function(){
     return view('user.dashboard');
 });

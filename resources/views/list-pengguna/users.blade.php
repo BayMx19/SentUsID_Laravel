@@ -35,15 +35,13 @@
                                                     </tr>
                                                 </thead>
                                                 <tbody>
+                                                    @foreach ($users as $u)
                                                     <tr>
-                                                        <td>65165162121</td>
-                                                        <td>Isa</td>
-                                                        <td>isa@gmail.com</td>
-                                                        <td>17 Februari 2023</td>
-                                                        <td>User</td>
-
-
-
+                                                        <td>{{$u->id}}
+                                                        <td>{{$u->username}}
+                                                        <td>{{$u->email}}
+                                                        <td>{{$u->created_at}}
+                                                        <td>{{$u->user_role}}
                                                         <td>
                                                             <a href="/detail-user"><button class="btn3 btn-primary"><i
                                                                         class="ti-info"></i></button></a>
@@ -51,25 +49,7 @@
                                                                         class="ti-trash"></i></button></a>
                                                         </td>
                                                     </tr>
-
-                                                    <tr>
-                                                        <td>65165162122</td>
-                                                        <td>Rifan</td>
-                                                        <td>rifan@gmail.com</td>
-                                                        <td>10 Februari 2023</td>
-                                                        <td>User</td>
-
-
-
-                                                        <td>
-                                                            <a href="/data-master/detailuser"><button
-                                                                    class="btn3 btn-primary"><i
-                                                                        class="ti-info"></i></button></a>
-                                                            <a href="/harilibur/delete/"><button class="btn3 btn-danger"><i
-                                                                        class="ti-trash"></i></button></a>
-                                                        </td>
-                                                    </tr>
-
+                                                @endforeach
                                                 </tbody>
                                             </table>
                                         </div>
