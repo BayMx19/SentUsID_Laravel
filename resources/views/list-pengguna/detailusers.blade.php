@@ -34,7 +34,7 @@
                                             <div class="form-group">
                                                 <label for="example-text-input" class="col-form-label">Role</label>
                                                 <input class="form-control" type="text" value=""
-                                                    id="example-text-input">
+                                                    id="example-text-input" disabled>
                                             </div>
                                             <div class="form-group">
                                                 <label for="example-text-input" class="col-form-label">Alamat</label>
@@ -43,7 +43,7 @@
                                             </div>
                                             <div class="form-group">
                                                 <label for="example-text-input" class="col-form-label">Nomor Telepon</label>
-                                                <input class="form-control " type="text" value=""
+                                                <input class="form-control " type="number" value=""
                                                     id="example-text-input">
                                             </div>
                                             <br>
@@ -60,5 +60,5 @@
             </div>
         </div>
     </div>
-    </div>
+
 @endsection
