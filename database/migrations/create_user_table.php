@@ -22,6 +22,7 @@ return new class extends Migration
             $table->string('no_telp')->nullable();
             $table->rememberToken('token')->nullable();
             $table->timestamp('created_at');
+            $table->timestamp('updated_at')->nullable();
         });
     }
 
