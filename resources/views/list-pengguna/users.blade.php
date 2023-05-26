@@ -41,7 +41,8 @@
                                                             <td>{{ $u->created_at }}
                                                             <td>{{ $u->user_role }}
                                                             <td>
-                                                                <a href="/detail-user"><button class="btn3 btn-primary"><svg
+                                                                <a href="/detailusers/{{ $u->id_users }}"><button
+                                                                        class="btn3 btn-primary"><svg
                                                                             xmlns="http://www.w3.org/2000/svg"
                                                                             width="16" height="16"
                                                                             fill="currentColor" class="bi bi-eye"
