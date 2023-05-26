@@ -15,4 +15,10 @@ class UsersController extends Controller
 
         return view ('list-pengguna.users',['users'=>$users]);
     }
+
+    public function getRoles() {
+        $getroles = DB::table('role')->distinct()->get();
+
+        return view ('list-pengguna.addusers',['getroles'=>$getroles]);
+    }
 }
