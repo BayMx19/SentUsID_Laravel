@@ -54,15 +54,15 @@ class UsersController extends Controller
        
         public function update(Request $request)
     {
-      
-        DB::table('users')->where('id_users',$request->id_users)->update([
+        // return $request;
+         DB::table('users')->where('id_users',$request->id_users)->update([
             'username' => $request->username,
             'email' => $request->email,
             'user_role' => $request->getroles,
             'alamat' => $request->alamat,
             'no_telp' => $request->no_telp,
         ]);
-        return redirect('/users');
+        return redirect('/users')->with('success', 'Berhasil edit User.');
     }
     public function delete($id)
     {

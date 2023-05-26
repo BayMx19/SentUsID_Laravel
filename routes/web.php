@@ -66,7 +66,7 @@ Route::post('/add-users/store', [UsersController::class, 'input']);
 
 Route::get('/add-users', [UsersController::class, 'getroles']);
 Route::get('/detailusers/{id}','App\Http\Controllers\UsersController@edit');
-Route::post('/list-pengguna/update', [UsersController::class, 'update']);
+Route::post('/list-pengguna/update/{id}', [UsersController::class, 'update']);
 Route::get('/list-pengguna/delete/{id}','App\Http\Controllers\UsersController@delete');
 
 
