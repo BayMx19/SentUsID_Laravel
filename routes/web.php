@@ -66,6 +66,9 @@ Route::get('/detail-users', function() {
     return view('list-pengguna.detailusers');
 });
 
+Route::get('/add-users', function(){
+    return view('list-pengguna.addusers');
+});
 
 // END Route List Pengguna
 

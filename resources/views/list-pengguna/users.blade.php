@@ -13,7 +13,7 @@
                                 <div class="card-body">
                                     <h1 class="header-title">List Users</h4>
                                         <div class="button-tambah">
-                                            <a href="{{ 'tambah-karyawan' }}"><button class="btn btn-primary"
+                                            <a href="{{ '/add-users' }}"><button class="btn btn-primary"
                                                     style="float:right;">Tambah
                                                     Pengguna</button></a> <br>
                                         </div>
