@@ -70,6 +70,10 @@ Route::get('/add-users', [UsersController::class, 'addUsers']);
 Route::post('/add-users/store', [UsersController::class, 'input']);
 
 Route::get('/add-users', [UsersController::class, 'getroles']);
+Route::get('/list-pengguna/detail-users/{id}','App\Http\Controllers\UsersController@edit');
+Route::post('/list-pengguna/update',[UsersController::class, 'update']);
+Route::get('/list-pengguna/delete/{id}','App\Http\Controllers\UsersController@delete');
+
 
 // END Route List Pengguna
 

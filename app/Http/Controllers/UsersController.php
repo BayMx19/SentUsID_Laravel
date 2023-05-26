@@ -43,4 +43,34 @@ class UsersController extends Controller
         return redirect('/users')->with('success', 'Berhasil menambahkan User.');
     
     }
+
+    public function edit($id)
+    {
+        $users = DB::table('users')->where('id',$id)->get();
+    
+        return view('/list-pengguna.detail-users',['users' => $users[0]]);
+     
+    }
+       
+        public function update(Request $request)
+    {
+      
+        DB::table('users')->where('id',$request->id)->update([
+            'username' => $request->username,
+            'email' => $request->email,
+            'password' => Hash::make($request['password']),
+            'user_role' => $request->getroles,
+            'alamat' => $request->alamat,
+            'no_telp' => $request->no_telp,
+        ]);
+        return redirect('/users');
+    }
+    public function delete($id)
+    {
+    
+        DB::table('users')->where('id_users',$id)->delete();
+
+        return redirect('/users')->with('success', 'User berhasil dihapus.');
+    }
+    
 }

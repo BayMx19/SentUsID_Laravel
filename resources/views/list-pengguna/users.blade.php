@@ -51,7 +51,7 @@
                                                                             <path
                                                                                 d="M8 5.5a2.5 2.5 0 1 0 0 5 2.5 2.5 0 0 0 0-5zM4.5 8a3.5 3.5 0 1 1 7 0 3.5 3.5 0 0 1-7 0z" />
                                                                         </svg></button></a>
-                                                                <a href="/harilibur/delete/"><button
+                                                                <a href="/list-pengguna/delete/{{ $u->id_users }}"><button
                                                                         class="btn3 btn-danger"><svg
                                                                             xmlns="http://www.w3.org/2000/svg"
                                                                             width="16" height="16"
