@@ -35,8 +35,9 @@
                                                 <label for="example-text-input" class="col-form-label">Role</label>
                                                 <select class="form-select mb-5" name="getroles" value=""
                                                     id="getroles">
+
+                                                    <option disabled selected>Pilih Role</option>
                                                     @foreach ($getroles as $gr)
-                                                        <option disabled selected>Pilih Role</option>
                                                         <option name="getroles">{{ $gr->nama_role }}</option>
                                                     @endforeach
                                                 </select>

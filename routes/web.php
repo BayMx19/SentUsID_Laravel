@@ -69,6 +69,7 @@ Route::get('/detail-users', function() {
 Route::get('/add-users', function(){
     return view('list-pengguna.addusers');
 });
+Route::get('/add-users', [UsersController::class, 'getroles']);
 
 // END Route List Pengguna
 
