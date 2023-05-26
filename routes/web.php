@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\UsersController;
 use App\Http\Controllers\Auth\LoginController;
+use App\Http\Controllers\MitraController;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 
@@ -37,9 +38,7 @@ Route::get('/history', function(){
 });
 // END Route History
 // Start Route List Mitra
-Route::get('/mitra', function(){
-    return view('list-mitra.mitra');
-});
+Route::get('/mitra', [MitraController::class, 'index']);
 // END Route List Mitra
 // Start Route List Pesanan
 Route::get('/pesanan', function(){
