@@ -21,6 +21,7 @@
 
                                         <form method="POST" action="/add-users/store">
                                             {{ csrf_field() }}
+
                                             <div class="form-group">
                                                 <label for="example-text-input" class="col-form-label">Username</label>
                                                 <input class="form-control" type="text" value=""

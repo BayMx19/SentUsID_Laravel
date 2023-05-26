@@ -25,6 +25,24 @@
                                                 id="example-search-input" disabled readonly oncopy="return false;"
                                                 onpaste="return false;">
                                         </div>
+                                        <div class="form-group">
+                                            <label for="example-text-input" class="col-form-label">Role</label>
+                                            <input class="form-control" type="text" value="{{ Auth::user()->user_role }}"
+                                                id="example-text-input" disabled readonly oncopy="return false;"
+                                                onpaste="return false;">
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="example-text-input" class="col-form-label">Alamat</label>
+                                            <input class="form-control" type="text" value="{{ Auth::user()->alamat }}"
+                                                id="example-text-input" disabled readonly oncopy="return false;"
+                                                onpaste="return false;">
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="example-text-input" class="col-form-label">No. Telpon</label>
+                                            <input class="form-control" type="text" value="{{ Auth::user()->no_telp }}"
+                                                id="example-text-input" disabled readonly oncopy="return false;"
+                                                onpaste="return false;">
+                                        </div>
 
 
                                 </div>
