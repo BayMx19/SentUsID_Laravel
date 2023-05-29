@@ -56,6 +56,7 @@
         @include('layouts.sidebar')
 
         @yield('content')
+        <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
         <script src="js/vendor/jquery-2.2.4.min.js"></script>
         <script src="https://cdn.datatables.net/1.10.19/js/jquery.dataTables.js"></script>
         <script src="https://cdn.datatables.net/1.10.18/js/jquery.dataTables.min.js"></script>
@@ -81,7 +82,13 @@
             });
         });
     </script>
-
+    <script>
+        $(document).ready(function() {
+            $('#myDatamitra').DataTable({
+                "searching": false,
+            });
+        });
+    </script>
 </body>
 
 </html>

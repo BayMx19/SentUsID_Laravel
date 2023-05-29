@@ -39,7 +39,8 @@ Route::get('/history', function(){
 // END Route History
 // Start Route List Mitra
 Route::get('/mitra', [MitraController::class, 'index']);
-// END Route List Mitra
+Route::get('/mitra', [MitraController::class, 'mitra']);
+    // END Route List Mitra
 // Start Route List Pesanan
 Route::get('/pesanan', function(){
     return view('list-pesanan.pesanan');
@@ -56,9 +57,8 @@ Route::get('/toko', function(){
 });
 // END Route List Toko
 // Start Route List Pengguna
-Route::get('/users', function(){
-    return view('list-pengguna.users');
-});
+Route::get('/users', [UsersController::class, 'index']);
+Route::get('/users', [UsersController::class, 'pengguna']);
 
 Route::get('/add-users', [UsersController::class, 'addUsers']);
 Route::post('/add-users/store', [UsersController::class, 'input']);
@@ -66,8 +66,9 @@ Route::post('/add-users/store', [UsersController::class, 'input']);
 Route::get('/add-users', [UsersController::class, 'getroles']);
 Route::get('/detailusers/{id}','App\Http\Controllers\UsersController@edit');
 Route::post('/list-pengguna/update/{id}', [UsersController::class, 'update']);
-Route::get('/list-pengguna/delete/{id}','App\Http\Controllers\UsersController@delete');
+// Route::get('/list-pengguna/delete/{id}','App\Http\Controllers\UsersController@delete');
 
+Route::get('/users/delete/{id}', [UsersController::class, 'delete']);
 
 // END Route List Pengguna
 

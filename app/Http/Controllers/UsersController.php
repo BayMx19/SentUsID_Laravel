@@ -68,12 +68,14 @@ class UsersController extends Controller
     }
     public function delete($id)
         {
-            $title = 'Delete User!';
+            // $users = User::get();
+            // return $users;
+            $title = 'Delete User';
             $text = "Are you sure want to delete it?";
             confirmDelete($title, $text);
-            return view ('list-pengguna.users', compact(''));
+            // return view ('/users', compact('users'));
 
-            // // Menampilkan SweetAlert konfirmasi delete
+            // Menampilkan SweetAlert konfirmasi delete
             // Alert::warning('Delete User!', 'Are you sure you want to delete?')
             //     ->showCancelButton(true)
             //     ->showConfirmButton(true)

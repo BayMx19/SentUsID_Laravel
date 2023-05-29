@@ -22,8 +22,8 @@
 
 
 
-                                            <table class="table datatable-primary text-center myDatausers display"
-                                                id="myDatausers">
+                                            <table class="table datatable-primary text-center myDatamitra display"
+                                                id="myDatamitra">
                                                 <thead class="text-uppercase bg-primary">
                                                     <tr class="text-white">
                                                         <th scope="col">Nama Mitra</th>
