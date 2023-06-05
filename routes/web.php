@@ -40,6 +40,12 @@ Route::get('/history', function(){
 // Start Route List Mitra
 Route::get('/mitra', [MitraController::class, 'index']);
 Route::get('/mitra', [MitraController::class, 'mitra']);
+
+Route::get('/add-mitra', [MitraController::class, 'addMitra']);
+Route::post('/add-mitra/store', [MitraController::class, 'input']);
+
+Route::get('/add-mitra', [MitraController::class, 'getEmail']);
+Route::get('/mitra/delete/{id}', [MitraController::class, 'delete']);
     // END Route List Mitra
 // Start Route List Pesanan
 Route::get('/pesanan', function(){

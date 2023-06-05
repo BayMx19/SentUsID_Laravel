@@ -5,7 +5,6 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Hash;
-use App\Models\User;
 use RealRashid\SweetAlert\Facades\Alert;
 
 class UsersController extends Controller
@@ -68,29 +67,8 @@ class UsersController extends Controller
     }
     public function delete($id)
         {
-            // $users = User::get();
-            // return $users;
-            $title = 'Delete User';
-            $text = "Are you sure want to delete it?";
-            confirmDelete($title, $text);
-            // return view ('/users', compact('users'));
-
-            // Menampilkan SweetAlert konfirmasi delete
-            // Alert::warning('Delete User!', 'Are you sure you want to delete?')
-            //     ->showCancelButton(true)
-            //     ->showConfirmButton(true)
-            //     ->focusConfirm(false)
-            //     ->confirmButtonText('Delete')
-            //     ->cancelButtonText('Cancel')
-            //     ->reverseButtons();
-
-            // // Menghapus data pengguna jika konfirmasi delete diterima
-            // if (Alert::confirmed()) {
-            //     DB::table('users')->where('id_users', $id)->delete();
-            //     return redirect('/users')->with('success', 'User berhasil dihapus.');
-            // } else {
-            //     return redirect('/users');
-            // }
+            DB::table('users')->where('id_users', $id)->delete();
+            return redirect('/users')->with('success', 'Berhasil hapus User.');
         }
     
 }

@@ -86,6 +86,7 @@
         $(document).ready(function() {
             $('#myDatamitra').DataTable({
                 "searching": false,
+                
             });
         });
     </script>

@@ -13,7 +13,7 @@
                                 <div class="card-body">
                                     <h1 class="header-title">List Mitra</h4>
                                         <div class="button-tambah">
-                                            <a href="{{ '/add-users' }}"><button class="btn btn-primary"
+                                            <a href="{{ '/add-mitra' }}"><button class="btn btn-primary"
                                                     style="float:right;">Tambah
                                                     Mitra</button></a> <br>
                                         </div>
@@ -29,7 +29,8 @@
                                                         <th scope="col">Nama Mitra</th>
                                                         <th scope="col">Email</th>
                                                         <th scope="col">Tanggal Registrasi</th>
-                                                        <th scope="col"></th>
+                                                        <th scope="col">Tanggal Selesai</th>
+                                                        <th scope="col">Status</th>
                                                         <th scope="col" class="no-sort">Action</th>
                                                     </tr>
                                                 </thead>
@@ -37,7 +38,7 @@
                                                     @foreach ($mitra as $m)
                                                         <tr>
                                                             <td>{{ $m->nama_mitra }}
-                                                            <td>{{ $m->email_mitra }}
+                                                            <td>{{ $m->email }}
                                                             <td>{{ $m->tanggal_daftar }}
                                                             <td>{{ $m->tanggal_selesai }}
                                                             <td>{{ $m->status_mitra }}
@@ -54,7 +55,7 @@
                                                                             <path
                                                                                 d="M8 5.5a2.5 2.5 0 1 0 0 5 2.5 2.5 0 0 0 0-5zM4.5 8a3.5 3.5 0 1 1 7 0 3.5 3.5 0 0 1-7 0z" />
                                                                         </svg></button></a>
-                                                                <a href="/list-pengguna/delete/{{ $m->id_mitra }}"><button
+                                                                <a href="/mitra/delete/{{ $m->id_mitra }}"><button
                                                                         class="btn3 btn-danger"><svg
                                                                             xmlns="http://www.w3.org/2000/svg"
                                                                             width="16" height="16"
@@ -81,4 +82,5 @@
             </div>
         </div>
     </div>
+    @include('sweetalert::alert')
 @endsection

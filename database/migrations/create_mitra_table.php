@@ -15,6 +15,7 @@ return new class extends Migration
         Schema::create('mitra', function (Blueprint $table) {
             $table->id('id_mitra');
             $table->string('nama_mitra');
+            $table->string('email')->unique();
             $table->string('alamat_mitra');
             $table->bigInteger('no_telp_mitra')->unsigned();
             $table->string('deskripsi', 255);
