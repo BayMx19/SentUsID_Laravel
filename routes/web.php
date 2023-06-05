@@ -44,6 +44,9 @@ Route::get('/mitra', [MitraController::class, 'mitra']);
 Route::get('/add-mitra', [MitraController::class, 'addMitra']);
 Route::post('/add-mitra/store', [MitraController::class, 'input']);
 
+Route::get('/detailmitra/{id_mitra}','App\Http\Controllers\MitraController@edit');
+Route::post('/list-mitra/update/{id}', [MitraController::class, 'update']);
+
 Route::get('/add-mitra', [MitraController::class, 'getEmail']);
 Route::get('/mitra/delete/{id}', [MitraController::class, 'delete']);
     // END Route List Mitra

@@ -37,8 +37,6 @@ class MitraController extends Controller
             'email' => $request->email,
             'alamat_mitra' => $request->alamat_mitra,
             'no_telp_mitra' => $request->no_telp_mitra,
-            'deskripsi' => $request->deskripsi,
-            'foto' => $request->foto,
             'tanggal_daftar' => $request->tanggal_daftar,
             'tanggal_selesai' => $request->tanggal_selesai,
             'status_mitra' => $request->status_mitra,
@@ -47,6 +45,31 @@ class MitraController extends Controller
         return redirect('/mitra')->with('success', 'Berhasil menambahkan mitra.');
     
     }
+
+
+    public function edit($id)
+    {
+        $mitra = DB::table('mitra')->where('id_mitra',$id)->get();
+    
+        return view('/list-mitra.detailmitra',['mitra' => $mitra[0]]);
+     
+    }
+
+    public function update(Request $request)
+    {
+        // return $request;
+         DB::table('mitra')->where('id_mitra',$request->id_mitra)->update([
+            'nama_mitra' => $request->nama_mitra,
+            'email' => $request->email,
+            'alamat_mitra' => $request->alamat_mitra,
+            'no_telp_mitra' => $request->no_telp_mitra,
+            'tanggal_daftar' => $request->tanggal_daftar,
+            'tanggal_selesai' => $request->tanggal_selesai,
+            'status_mitra' => $request->status_mitra,
+        ]);
+        return redirect('/users')->with('success', 'Berhasil edit User.');
+    }
+
     public function delete($id)
         {
             DB::table('mitra')->where('id_mitra', $id)->delete();

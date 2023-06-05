@@ -56,9 +56,12 @@
                                                     id="tgl-selesai-input" name="tanggal_selesai">
                                             </div>
                                             <div class="form-group">
-                                                <label for="example-text-input" class="col-form-label">Status Kemitraan</label>
-                                                <input class="form-control" type="text" value=""
-                                                    id="status-input" name="status_mitra">
+                                            <label for="status-input" class="col-form-label">Status Kemitraan</label>
+                                            <select class="form-control" id="status-input" name="status_mitra">
+                                                <option disabled selected>Pilih Status</option>
+                                                <option value="Aktif">Aktif</option>
+                                                <option value="Tidak Aktif">Tidak Aktif</option>
+                                            </select>
                                             </div>
                                             <br>
                                             <div class="d-grid gap-2 col-6 mx-auto">

@@ -44,7 +44,7 @@
                                                             <td>{{ $m->status_mitra }}
 
                                                             <td>
-                                                                <a href="/detailusers/{{ $m->id_mitra }}"><button
+                                                                <a href="/detailmitra/{{ $m->id_mitra }}"><button
                                                                         class="btn3 btn-primary"><svg
                                                                             xmlns="http://www.w3.org/2000/svg"
                                                                             width="16" height="16"

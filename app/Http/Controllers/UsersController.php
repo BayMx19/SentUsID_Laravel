@@ -38,6 +38,8 @@ class UsersController extends Controller
             'password' => Hash::make($request['password']),
             'user_role' => $request->getroles,
             'alamat' => $request->alamat,
+            'deskripsi' => $request->deskripsi,
+            'foto' => $request->foto,
             'no_telp' => $request->no_telp,
         ]);
         // alihkan halaman ke halaman karya wan
@@ -62,6 +64,8 @@ class UsersController extends Controller
             'user_role' => $request->getroles,
             'alamat' => $request->alamat,
             'no_telp' => $request->no_telp,
+            'deskripsi' => $request->deskripsi,
+            'foto' => $request->foto,
         ]);
         return redirect('/users')->with('success', 'Berhasil edit User.');
     }

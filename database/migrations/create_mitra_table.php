@@ -17,7 +17,7 @@ return new class extends Migration
             $table->string('nama_mitra');
             $table->string('email')->unique();
             $table->string('alamat_mitra');
-            $table->bigInteger('no_telp_mitra')->unsigned();
+            $table->string('no_telp_mitra')->nullable();
             
             $table->timestamp('tanggal_daftar')->default(DB::raw('CURRENT_TIMESTAMP'));
             $table->timestamp('tanggal_selesai')->nullable();
