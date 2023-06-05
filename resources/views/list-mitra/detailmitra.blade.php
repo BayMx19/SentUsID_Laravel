@@ -26,7 +26,8 @@
                                         <form action="/list-mitra/update/{{ request()->route('id_mitra') }}" method="post">
 
                                             {{ csrf_field() }}
-                                            <input type="hidden" name="id_mitra" value="{{ request()->route('id_mitra') }}">
+                                            <input type="hidden" name="id_mitra"
+                                                value="{{ request()->route('id_mitra') }}">
 
                                             <div class="form-group">
                                                 <label for="example-text-input" class="col-form-label">Nama Mitra</label>
@@ -49,11 +50,22 @@
                                                     value="{{ $mitra->no_telp_mitra }}" id="example-text-input">
                                             </div>
                                             <div class="form-group">
-                                                <label for="example-text-input" class="col-form-label">Tanggal Daftar</label>
+                                                <label for="example-text-input" class="col-form-label">Tanggal
+                                                    Daftar</label>
                                                 <input class="form-control " type="date" name="tanggal_daftar"
-                                                    value="{{ $mitra->tanggal_daftar }}" id="example-text-input">
+                                                    value="{{ date('Y-m-d', strtotime($mitra->tanggal_daftar)) }}"
+                                                    id="example-text-input">
                                             </div>
-                                            
+                                            <div class="form-group">
+                                                <label for="status-input" class="col-form-label">Status Kemitraan</label>
+                                                <select class="form-control" value="" id="status-input"
+                                                    name="status_mitra">
+                                                    <option disabled selected>{{ $mitra->status_mitra }}</option>
+                                                    <option value="Aktif">Aktif</option>
+                                                    <option value="Tidak Aktif">Tidak Aktif</option>
+                                                </select>
+                                            </div>
+
                                             <br>
                                             <div class="d-grid gap-2 col-6 mx-auto">
                                                 <button type="submit" class="btn4 btn-primary">Simpan</button>

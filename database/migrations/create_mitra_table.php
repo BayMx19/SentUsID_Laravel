@@ -14,9 +14,9 @@ return new class extends Migration
     {
         Schema::create('mitra', function (Blueprint $table) {
             $table->id('id_mitra');
-            $table->string('nama_mitra');
-            $table->string('email')->unique();
-            $table->string('alamat_mitra');
+            $table->string('nama_mitra')->nullable();
+            $table->string('email')->unique()->nullable();
+            $table->string('alamat_mitra')->nullable();
             $table->string('no_telp_mitra')->nullable();
             
             $table->timestamp('tanggal_daftar')->default(DB::raw('CURRENT_TIMESTAMP'));

@@ -67,7 +67,7 @@ class MitraController extends Controller
             'tanggal_selesai' => $request->tanggal_selesai,
             'status_mitra' => $request->status_mitra,
         ]);
-        return redirect('/users')->with('success', 'Berhasil edit User.');
+        return redirect('/mitra')->with('success', 'Berhasil edit User.');
     }
 
     public function delete($id)

@@ -38,7 +38,7 @@
                                                         <tr>
                                                             <td>{{ $u->username }}
                                                             <td>{{ $u->email }}
-                                                            <td>{{ $u->created_at }}
+                                                            <td>{{ date('d-m-Y', strtotime($u->created_at)) }}
                                                             <td>{{ $u->user_role }}
                                                             <td>
                                                                 <a href="/detailusers/{{ $u->id_users }}"><button
@@ -55,7 +55,7 @@
                                                                 @if ($u->username != Auth::user()->username)
                                                                     {{-- <a href="/list-pengguna/delete/{{ $u->id_users }}"> --}}
                                                                     <a href="users/delete/{{ $u->id_users }}"
-                                                                        class="btn btn-danger" data-confirm-delete="true">
+                                                                        data-confirm-delete="true">
                                                                         <button class="btn3 btn-danger">
                                                                             <svg xmlns="http://www.w3.org/2000/svg"
                                                                                 width="16" height="16"

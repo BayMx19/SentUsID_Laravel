@@ -70,10 +70,11 @@
                                                 <input class="form-control" type="text" value=""
                                                     id="deskripsi-input" name="deskripsi">
                                             </div>
-                                            <div class="form-group">
-                                                <label for="example-text-input" class="col-form-label">Foto</label>
-                                                <input class="form-control" type="file" value=""
-                                                    id="foto-input" name="foto">
+
+                                            <div class="mb-3">
+                                                <label for="formFileSm" class="form-label">Foto</label>
+                                                <input class="form-control form-control-sm" id="formFileSm" name="foto"
+                                                    type="file">
                                             </div>
                                             <br>
                                             <div class="d-grid gap-2 col-6 mx-auto">

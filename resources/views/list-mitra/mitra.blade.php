@@ -39,8 +39,8 @@
                                                         <tr>
                                                             <td>{{ $m->nama_mitra }}
                                                             <td>{{ $m->email }}
-                                                            <td>{{ $m->tanggal_daftar }}
-                                                            <td>{{ $m->tanggal_selesai }}
+                                                            <td>{{ date('d-m-Y', strtotime($m->tanggal_daftar)) }}
+                                                            <td>{{ date('d-m-Y', strtotime($m->tanggal_selesai)) }}
                                                             <td>{{ $m->status_mitra }}
 
                                                             <td>
