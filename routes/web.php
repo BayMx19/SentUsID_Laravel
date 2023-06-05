@@ -33,55 +33,68 @@ Route::get('/akun', function(){
 // END Route Akun
 
 // Start Route History
-Route::get('/history', function(){
-    return view('list-history.history');
+Route::middleware('user')->group(function() {
+    Route::get('/history', function(){
+        return view('list-history.history');
+    });
 });
+
 // END Route History
 // Start Route List Mitra
-Route::get('/mitra', [MitraController::class, 'index']);
-Route::get('/mitra', [MitraController::class, 'mitra']);
+Route::middleware('superadmin')->group(function() {
+    Route::get('/mitra', [MitraController::class, 'index']);
+    Route::get('/mitra', [MitraController::class, 'mitra']);
 
-Route::get('/add-mitra', [MitraController::class, 'addMitra']);
-Route::post('/add-mitra/store', [MitraController::class, 'input']);
+    Route::get('/add-mitra', [MitraController::class, 'addMitra']);
+    Route::post('/add-mitra/store', [MitraController::class, 'input']);
 
-Route::get('/detailmitra/{id_mitra}','App\Http\Controllers\MitraController@edit');
-Route::post('/list-mitra/update/{id}', [MitraController::class, 'update']);
+    Route::get('/detailmitra/{id_mitra}','App\Http\Controllers\MitraController@edit');
+    Route::post('/list-mitra/update/{id}', [MitraController::class, 'update']);
 
-Route::get('/add-mitra', [MitraController::class, 'getEmail']);
-Route::get('/mitra/delete/{id}', [MitraController::class, 'delete']);
+    Route::get('/add-mitra', [MitraController::class, 'getEmail']);
+    Route::get('/mitra/delete/{id}', [MitraController::class, 'delete']);
+});
     // END Route List Mitra
 // Start Route List Pesanan
-Route::get('/pesanan', function(){
-    return view('list-pesanan.pesanan');
+Route::middleware('admin')->group(function() {
+    Route::get('/pesanan', function(){
+        return view('list-pesanan.pesanan');
+    });
 });
 // END Route List Pesanan
 // Start Route List Produk
-Route::get('/produk', function(){
-    return view('list-produk.produk');
+Route::middleware('admin')->group(function() {
+    Route::get('/produk', function(){
+        return view('list-produk.produk');
+    });
 });
 // END Route List Produk
 // Start Route List Toko
-Route::get('/toko', function(){
-    return view('list-toko.toko');
+Route::middleware('user')->group(function() {
+    Route::get('/toko', function(){
+        return view('list-toko.toko');
+    });
 });
+
 // END Route List Toko
 // Start Route List Pengguna
-Route::get('/users', [UsersController::class, 'index']);
-Route::get('/users', [UsersController::class, 'pengguna']);
+Route::middleware('superadmin')->group(function() {
+    Route::get('/users', [UsersController::class, 'index']);
+    Route::get('/users', [UsersController::class, 'pengguna']);
 
-Route::get('/add-users', [UsersController::class, 'addUsers']);
-Route::post('/add-users/store', [UsersController::class, 'input']);
+    Route::get('/add-users', [UsersController::class, 'addUsers']);
+    Route::post('/add-users/store', [UsersController::class, 'input']);
 
-Route::get('/add-users', [UsersController::class, 'getroles']);
-Route::get('/detailusers/{id}','App\Http\Controllers\UsersController@edit');
-Route::post('/list-pengguna/update/{id}', [UsersController::class, 'update']);
-// Route::get('/list-pengguna/delete/{id}','App\Http\Controllers\UsersController@delete');
+    Route::get('/add-users', [UsersController::class, 'getroles']);
+    Route::get('/detailusers/{id}','App\Http\Controllers\UsersController@edit');
+    Route::post('/list-pengguna/update/{id}', [UsersController::class, 'update']);
+    // Route::get('/list-pengguna/delete/{id}','App\Http\Controllers\UsersController@delete');
 
-Route::get('/users/delete/{id}', [UsersController::class, 'delete']);
+    Route::get('/users/delete/{id}', [UsersController::class, 'delete']);
+    Route::get('users',[UsersController::class, 'pengguna'])->name('users');
+});
 
 // END Route List Pengguna
-
-Route::get('users',[UsersController::class, 'pengguna'])->name('users');
 
 // Start Route Authentication
 Route::get('dashboard-user', function(){
