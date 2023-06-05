@@ -53,7 +53,16 @@
                                                 <input class="form-control " type="date" name="tanggal_daftar"
                                                     value="{{ $mitra->tanggal_daftar }}" id="example-text-input">
                                             </div>
-                                            
+                                            <div class="form-group">
+                                                <label for="example-text-input" class="col-form-label">Tanggal Selesai</label>
+                                                <input class="form-control " type="date" name="tanggal_selesai"
+                                                    value="{{ $mitra->tanggal_selesai }}" id="example-text-input">
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="example-text-input" class="col-form-label">Status</label>
+                                                <input class="form-control " type="text" name="status_mitra"
+                                                    value="{{ $mitra->status_mitra }}" id="example-text-input">
+                                            </div>
                                             <br>
                                             <div class="d-grid gap-2 col-6 mx-auto">
                                                 <button type="submit" class="btn4 btn-primary">Simpan</button>
