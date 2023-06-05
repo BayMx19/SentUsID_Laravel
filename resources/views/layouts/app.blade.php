@@ -90,6 +90,18 @@
             });
         });
     </script>
+    @if (session('toast_error'))
+    <script>
+        Swal.fire({
+            icon: 'error',
+            title: 'Error',
+            text: "{{ session('toast_error') }}",
+            showConfirmButton: false,
+            timer: 3000
+        });
+    </script>
+@endif
+
 </body>
 
 </html>

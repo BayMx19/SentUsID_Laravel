@@ -19,6 +19,6 @@ class UserMiddleware
             return $next($request);
         }
         
-        abort(403, 'Unauthorized action.');
+        return redirect()->back()->with('toast_error','Anda tidak memiliki izin untuk mengakses halaman ini.');
     }
 }
