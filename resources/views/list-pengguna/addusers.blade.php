@@ -65,6 +65,16 @@
                                                 <input class="form-control " type="number" value=""
                                                     id="example-text-input" name="no_telp">
                                             </div>
+                                            <div class="form-group">
+                                                <label for="example-text-input" class="col-form-label">Deskripsi</label>
+                                                <input class="form-control" type="text" value=""
+                                                    id="deskripsi-input" name="deskripsi">
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="example-text-input" class="col-form-label">Foto</label>
+                                                <input class="form-control" type="file" value=""
+                                                    id="foto-input" name="foto">
+                                            </div>
                                             <br>
                                             <div class="d-grid gap-2 col-6 mx-auto">
                                                 <button type="submit" class="btn4 btn-primary">Simpan</button>

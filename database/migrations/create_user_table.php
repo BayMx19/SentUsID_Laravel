@@ -17,11 +17,13 @@ return new class extends Migration
             $table->string('username');
             $table->string('email')->unique();
             $table->string('password');
-            $table->string('user_role');
+            $table->string('user_role')->nullable();
             $table->string('alamat')->nullable();
             $table->string('no_telp')->nullable();
+            $table->string('deskripsi', 255)->nullable();
+            $table->string('foto', 255)->nullable();
             $table->rememberToken('token')->nullable();
-            $table->timestamp('created_at');
+            $table->timestamp('created_at')->nullable();
             $table->timestamp('updated_at')->nullable();
         });
     }

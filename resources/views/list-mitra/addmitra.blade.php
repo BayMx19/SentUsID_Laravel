@@ -46,16 +46,6 @@
                                                 <input class="form-control" type="text" id="teleponMitra" name="no_telp_mitra" readonly>
                                             </div>
                                             <div class="form-group">
-                                                <label for="example-text-input" class="col-form-label">Deskripsi</label>
-                                                <input class="form-control" type="text" value=""
-                                                    id="deskripsi-input" name="deskripsi">
-                                            </div>
-                                            <div class="form-group">
-                                                <label for="example-text-input" class="col-form-label">Foto</label>
-                                                <input class="form-control" type="file" value=""
-                                                    id="foto-input" name="foto">
-                                            </div>
-                                            <div class="form-group">
                                                 <label for="example-text-input" class="col-form-label">Tanggal Daftar</label>
                                                 <input class="form-control" type="date" value=""
                                                     id="tgl-daftar-input" name="tanggal_daftar">

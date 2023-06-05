@@ -18,8 +18,7 @@ return new class extends Migration
             $table->string('email')->unique();
             $table->string('alamat_mitra');
             $table->bigInteger('no_telp_mitra')->unsigned();
-            $table->string('deskripsi', 255);
-            $table->string('foto', 255);
+            
             $table->timestamp('tanggal_daftar')->default(DB::raw('CURRENT_TIMESTAMP'));
             $table->timestamp('tanggal_selesai')->nullable();
             $table->string('status_mitra', 255);
