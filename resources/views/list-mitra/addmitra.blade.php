@@ -24,7 +24,8 @@
 
                                             <div class="form-group">
                                                 <label for="example-text-input" class="col-form-label">Nama Mitra</label>
-                                                <input class="form-control" type="text" id="namaMitra" name="nama_mitra" value="" readonly>
+                                                <input class="form-control" type="text" id="namaMitra" name="nama_mitra"
+                                                    value="" readonly>
                                             </div>
                                             <div class="form-group">
                                                 <label for="example-text-input" class="col-form-label">Email</label>
@@ -32,36 +33,43 @@
                                                     id="getEmail">
                                                     <option disabled selected>Pilih Email</option>
                                                     @foreach ($getEmail as $ge)
-                                                        <option value="{{ $ge->email }}" data-username="{{ $ge->username }}" data-alamat="{{ $ge->alamat }}" data-telepon="{{ $ge->no_telp }}">{{ $ge->email }}</option>
+                                                        <option value="{{ $ge->email }}"
+                                                            data-username="{{ $ge->username }}"
+                                                            data-alamat="{{ $ge->alamat }}"
+                                                            data-telepon="{{ $ge->no_telp }}">{{ $ge->email }}</option>
                                                     @endforeach
                                                 </select>
                                                 <input type="hidden" id="emailMitra" name="email">
                                             </div>
                                             <div class="form-group">
                                                 <label for="example-text-input" class="col-form-label">Alamat Mitra</label>
-                                                <input class="form-control" type="text" id="alamatMitra" name="alamat_mitra" readonly>
+                                                <input class="form-control" type="text" id="alamatMitra"
+                                                    name="alamat_mitra" readonly>
                                             </div>
                                             <div class="form-group">
                                                 <label for="example-text-input" class="col-form-label">Nomor Telepon</label>
-                                                <input class="form-control" type="text" id="teleponMitra" name="no_telp_mitra" readonly>
+                                                <input class="form-control" type="text" id="teleponMitra"
+                                                    name="no_telp_mitra" readonly>
                                             </div>
                                             <div class="form-group">
-                                                <label for="example-text-input" class="col-form-label">Tanggal Daftar</label>
+                                                <label for="example-text-input" class="col-form-label">Tanggal
+                                                    Daftar</label>
                                                 <input class="form-control" type="date" value=""
                                                     id="tgl-daftar-input" name="tanggal_daftar">
                                             </div>
                                             <div class="form-group">
-                                                <label for="example-text-input" class="col-form-label">Tanggal Selesai</label>
+                                                <label for="example-text-input" class="col-form-label">Tanggal
+                                                    Selesai</label>
                                                 <input class="form-control" type="date" value=""
-                                                    id="tgl-selesai-input" name="tanggal_selesai">
+                                                    id="tgl-selesai-input" name="tanggal_selesai" readonly>
                                             </div>
                                             <div class="form-group">
-                                            <label for="status-input" class="col-form-label">Status Kemitraan</label>
-                                            <select class="form-control" id="status-input" name="status_mitra">
-                                                <option disabled selected>Pilih Status</option>
-                                                <option value="Aktif">Aktif</option>
-                                                <option value="Tidak Aktif">Tidak Aktif</option>
-                                            </select>
+                                                <label for="status-input" class="col-form-label">Status Kemitraan</label>
+                                                <select class="form-control" id="status-input" name="status_mitra">
+                                                    <option disabled selected>Pilih Status</option>
+                                                    <option value="Aktif">Aktif</option>
+                                                    <option value="Tidak Aktif">Tidak Aktif</option>
+                                                </select>
                                             </div>
                                             <br>
                                             <div class="d-grid gap-2 col-6 mx-auto">
@@ -78,36 +86,37 @@
     </div>
 
     <script>
-    var selectEmail = document.getElementById('getEmail');
-    var namaMitraInput = document.getElementById('namaMitra');
-    var alamatMitraInput = document.getElementById('alamatMitra');
-    var teleponMitraInput = document.getElementById('teleponMitra');
-    var emailMitraInput = document.getElementById('emailMitra');
-    var tglBergabungInput = document.getElementById('tgl-daftar-input');
-    var tglExpiredInput = document.getElementById('tgl-selesai-input');
+        var selectEmail = document.getElementById('getEmail');
+        var namaMitraInput = document.getElementById('namaMitra');
+        var alamatMitraInput = document.getElementById('alamatMitra');
+        var teleponMitraInput = document.getElementById('teleponMitra');
+        var emailMitraInput = document.getElementById('emailMitra');
+        var tglBergabungInput = document.getElementById('tgl-daftar-input');
+        var tglExpiredInput = document.getElementById('tgl-selesai-input');
 
-    selectEmail.addEventListener('change', function() {
-        var selectedOption = selectEmail.options[selectEmail.selectedIndex];
-        var selectedEmail = selectedOption.value;
-        var selectedUsername = selectedOption.getAttribute('data-username');
-        var selectedAlamat = selectedOption.getAttribute('data-alamat');
-        var selectedTelepon = selectedOption.getAttribute('data-telepon');
+        selectEmail.addEventListener('change', function() {
+            var selectedOption = selectEmail.options[selectEmail.selectedIndex];
+            var selectedEmail = selectedOption.value;
+            var selectedUsername = selectedOption.getAttribute('data-username');
+            var selectedAlamat = selectedOption.getAttribute('data-alamat');
+            var selectedTelepon = selectedOption.getAttribute('data-telepon');
 
-        namaMitraInput.value = selectedUsername;
-        alamatMitraInput.value = selectedAlamat;
-        teleponMitraInput.value = selectedTelepon;
-        emailMitraInput.value = selectedEmail;
-        document.querySelector('input[name="email"]').value = selectedEmail;
-        document.querySelector('input[name="nama_mitra"]').value = selectedUsername;
-        document.querySelector('input[name="alamat_mitra"]').value = selectedAlamat;
-        document.querySelector('input[name="telepon_mitra"]').value = selectedTelepon;
-    });
+            namaMitraInput.value = selectedUsername;
+            alamatMitraInput.value = selectedAlamat;
+            teleponMitraInput.value = selectedTelepon;
+            emailMitraInput.value = selectedEmail;
+            document.querySelector('input[name="email"]').value = selectedEmail;
+            document.querySelector('input[name="nama_mitra"]').value = selectedUsername;
+            document.querySelector('input[name="alamat_mitra"]').value = selectedAlamat;
+            document.querySelector('input[name="telepon_mitra"]').value = selectedTelepon;
+        });
 
-    tglBergabungInput.addEventListener('change', function() {
-        var tglBergabung = new Date(tglBergabungInput.value);
-        var tglExpired = new Date(tglBergabung.getFullYear() + 1, tglBergabung.getMonth(), tglBergabung.getDate() + 1);
-        tglExpiredInput.value = tglExpired.toISOString().split('T')[0];
-        document.querySelector('input[name="tanggal_selesai"]').value = tglExpired.toISOString().split('T')[0];
-    });
-</script>
+        tglBergabungInput.addEventListener('change', function() {
+            var tglBergabung = new Date(tglBergabungInput.value);
+            var tglExpired = new Date(tglBergabung.getFullYear() + 1, tglBergabung.getMonth(), tglBergabung
+                .getDate() + 1);
+            tglExpiredInput.value = tglExpired.toISOString().split('T')[0];
+            document.querySelector('input[name="tanggal_selesai"]').value = tglExpired.toISOString().split('T')[0];
+        });
+    </script>
 @endsection

@@ -54,7 +54,14 @@
                                                     Daftar</label>
                                                 <input class="form-control " type="date" name="tanggal_daftar"
                                                     value="{{ date('Y-m-d', strtotime($mitra->tanggal_daftar)) }}"
-                                                    id="example-text-input">
+                                                    id="tgl-daftar-input">
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="example-text-input" class="col-form-label">Tanggal
+                                                    Selesai</label>
+                                                <input class="form-control " type="date" name="tanggal_daftar"
+                                                    value="{{ date('Y-m-d', strtotime($mitra->tanggal_selesai)) }}"
+                                                    id="tgl-selesai-input" disabled>
                                             </div>
                                             <div class="form-group">
                                                 <label for="status-input" class="col-form-label">Status Kemitraan</label>
@@ -80,4 +87,16 @@
         </div>
     </div>
 
+    <script>
+        var tglBergabungInput = document.getElementById('tgl-daftar-input');
+        var tglExpiredInput = document.getElementById('tgl-selesai-input');
+
+        tglBergabungInput.addEventListener('change', function() {
+            var tglBergabung = new Date(tglBergabungInput.value);
+            var tglExpired = new Date(tglBergabung.getFullYear() + 1, tglBergabung.getMonth(), tglBergabung
+                .getDate() + 1);
+            tglExpiredInput.value = tglExpired.toISOString().split('T')[0];
+            document.querySelector('input[name="tanggal_selesai"]').value = tglExpired.toISOString().split('T')[0];
+        });
+    </script>
 @endsection
