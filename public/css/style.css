@@ -529,6 +529,19 @@ height: 50px !important;
   border: 2px solid #005C97;
   font-weight: bold;
 }
+
+.btn3:hover{
+  color: #005C97;
+  background-color: white;
+  border: 2px solid #005C97;
+  font-weight: bold;
+}
+.btn5:hover{
+  color: red;
+  background-color: white;
+  border: 2px solid red;
+  font-weight: bold;
+}
 .btn2 {
   color: white;
   width: 80px;
@@ -545,7 +558,7 @@ height: 50px !important;
     font-size: 13px;
     letter-spacing: 0;
     border-radius: 12px;
-    border: none;
+    border: 2px solid transparent;
    }
    .btn4 {
     width: 100%;
@@ -565,6 +578,17 @@ height: 50px !important;
     border: 2px solid #005C97;
     font-weight: bold;
   }
+
+  .btn5 {
+    width: 40px;
+    color: white;
+    background-color: red;
+    padding: 5px 5px;
+    font-size: 13px;
+    letter-spacing: 0;
+    border-radius: 12px;
+    border: 2px solid transparent;
+   }
 
 
 

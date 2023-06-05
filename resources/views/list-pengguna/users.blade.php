@@ -56,7 +56,7 @@
                                                                     {{-- <a href="/list-pengguna/delete/{{ $u->id_users }}"> --}}
                                                                     <a href="users/delete/{{ $u->id_users }}"
                                                                         data-confirm-delete="true">
-                                                                        <button class="btn3 btn-danger">
+                                                                        <button class="btn5">
                                                                             <svg xmlns="http://www.w3.org/2000/svg"
                                                                                 width="16" height="16"
                                                                                 fill="currentColor" class="bi bi-trash3"
