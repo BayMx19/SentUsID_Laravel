@@ -18,11 +18,14 @@ class UsersController extends Controller
         return view ('list-pengguna.users',['users'=>$users]);
     }
 
-    public function getRoles() {
-        $getroles = DB::table('role')->distinct()->get();
+    
+    public function getRoless() {
+        $getroless = DB::table('role')->distinct()->get();
 
-        return view ('list-pengguna.addusers',['getroles'=>$getroles]);
+        return view ('list-pengguna.detailusers',['getroles'=>$getroless]);
+        
     }
+
 
     public function addUsers() {
         return view('list-pengguna.addusers');
@@ -57,7 +60,7 @@ class UsersController extends Controller
        
         public function update(Request $request)
     {
-        // return $request;
+        return $request;
          DB::table('users')->where('id_users',$request->id_users)->update([
             'username' => $request->username,
             'email' => $request->email,

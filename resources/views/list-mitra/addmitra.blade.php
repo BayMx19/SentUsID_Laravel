@@ -23,11 +23,6 @@
                                             {{ csrf_field() }}
 
                                             <div class="form-group">
-                                                <label for="example-text-input" class="col-form-label">Nama Mitra</label>
-                                                <input class="form-control" type="text" id="namaMitra" name="nama_mitra"
-                                                    value="" readonly>
-                                            </div>
-                                            <div class="form-group">
                                                 <label for="example-text-input" class="col-form-label">Email</label>
                                                 <select class="form-select mb-5" name="getEmail" value=""
                                                     id="getEmail">
@@ -40,6 +35,11 @@
                                                     @endforeach
                                                 </select>
                                                 <input type="hidden" id="emailMitra" name="email">
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="example-text-input" class="col-form-label">Nama Mitra</label>
+                                                <input class="form-control" type="text" id="namaMitra" name="nama_mitra"
+                                                    value="" readonly>
                                             </div>
                                             <div class="form-group">
                                                 <label for="example-text-input" class="col-form-label">Alamat Mitra</label>
