@@ -1625,3 +1625,8 @@ table.dataTable thead td {
     color: #fff;
     background-color: #005C97;
   }
+
+
+  a {
+    color: #00337C !important;
+  }

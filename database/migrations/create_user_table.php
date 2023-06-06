@@ -23,7 +23,7 @@ return new class extends Migration
             $table->string('deskripsi', 255)->nullable();
             $table->string('foto', 255)->nullable();
             $table->rememberToken('token')->nullable();
-            $table->timestamp('created_at')->nullable();
+            $table->timestamp('created_at');
             $table->timestamp('updated_at')->nullable();
         });
     }
