@@ -78,6 +78,16 @@
     <script>
         $(document).ready(function() {
             $('#myDatausers').DataTable({
+                "columns": [
+                    null,
+                    null,
+                    null,
+                    null,
+
+                    {
+                        orderable: false
+                    },
+                ],
                 "searching": false,
             });
         });
@@ -86,21 +96,32 @@
         $(document).ready(function() {
             $('#myDatamitra').DataTable({
                 "searching": false,
-                
+                "columns": [
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+
+                    {
+                        orderable: false
+                    },
+                ],
+
             });
         });
     </script>
     @if (session('toast_error'))
-    <script>
-        Swal.fire({
-            icon: 'error',
-            title: 'Error',
-            text: "{{ session('toast_error') }}",
-            showConfirmButton: false,
-            timer: 3000
-        });
-    </script>
-@endif
+        <script>
+            Swal.fire({
+                icon: 'error',
+                title: 'Error',
+                text: "{{ session('toast_error') }}",
+                showConfirmButton: false,
+                timer: 3000
+            });
+        </script>
+    @endif
 
 </body>
 
