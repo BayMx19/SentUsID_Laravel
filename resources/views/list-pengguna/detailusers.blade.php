@@ -38,18 +38,14 @@
                                                 <input class="form-control" type="text" name="email"
                                                     value="{{ $users->email }}" id="example-text-input">
                                             </div>
-
                                             <div class="form-group">
-                                                <label for="getroles" class="col-form-label">Role</label>
-                                                <select class="form-select mb-5" name="getroles" id="getroles">
-
-                                                    <option disabled>{{ $users->user_role }}</option>
-                                                    <option value="Admin">Admin</option>
-                                                    <option value="User">User</option>
-
-
-                                                </select>
+                                                <label for="example-text-input" class="col-form-label">Role</label>
+                                                <input class="form-control" type="text" name="getroles"
+                                                    value="{{ $users->user_role }}" id="example-text-input">
                                             </div>
+
+
+
                                             <div class="form-group">
                                                 <label for="example-text-input" class="col-form-label">Alamat</label>
                                                 <input class="form-control" type="text" name="alamat"
