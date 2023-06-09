@@ -123,6 +123,18 @@
         </script>
     @endif
 
+    <script>
+        $(document).ready(function() {
+            if (window.innerWidth <= 1364) {
+                $('.page-container').addClass('sbar_collapsed');
+            }
+
+            $('.nav-btn').on('click', function() {
+                $('.page-container').toggleClass('sbar_collapsed');
+            });
+        });
+    </script>
+
 </body>
 
 </html>
