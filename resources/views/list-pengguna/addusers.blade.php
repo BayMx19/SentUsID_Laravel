@@ -62,7 +62,7 @@
                                             </div>
                                             <div class="form-group">
                                                 <label for="example-text-input" class="col-form-label">Nomor Telepon</label>
-                                                <input class="form-control " type="number" value=""
+                                                <input class="form-control " type="text" value=""
                                                     id="example-text-input" name="no_telp">
                                             </div>
                                             <div class="form-group">

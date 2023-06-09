@@ -40,8 +40,14 @@
                                             </div>
                                             <div class="form-group">
                                                 <label for="example-text-input" class="col-form-label">Role</label>
-                                                <input class="form-control" type="text" name="getroles"
-                                                    value="{{ $users->user_role }}" id="example-text-input">
+                                                    <select class="form-select mb-5" name="user_role"
+                                                    id="getroles">
+
+                                                    <option disabled selected>{{ $users->user_role }}</option>
+                                                    @foreach ($getroles as $gr)
+                                                        <option name="getroles" value="{{ $gr->nama_role }}">{{ $gr->nama_role }}</option>
+                                                    @endforeach
+                                                </select>
                                             </div>
 
 

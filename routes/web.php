@@ -85,7 +85,7 @@ Route::middleware('superadmin')->group(function() {
     Route::get('/add-users', [UsersController::class, 'addUsers']);
     Route::post('/add-users/store', [UsersController::class, 'input']);
 
-    Route::get('/add-users', [UsersController::class, 'getroles']);
+    Route::get('/add-users', [UsersController::class, 'getRoless']);
     // Route::get('/detailusers', [UsersController::class, 'getroless']);
 
     Route::get('/detailusers/{id}','App\Http\Controllers\UsersController@edit');
