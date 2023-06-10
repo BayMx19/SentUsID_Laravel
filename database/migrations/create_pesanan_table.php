@@ -13,21 +13,15 @@ return new class extends Migration
     public function up(): void
     {
         Schema::create('pesanan', function (Blueprint $table) {
-            $table->id('id_pesanan');
-
-            $table->bigInteger('id_user')->unsigned();
-            // $table->foreign('id_user')->references('id')->on('users');
-
-            $table->bigInteger('id_produk')->unsigned();
-            // $table->foreign('id_produk')->references('id')->on('produk');
-
-            $table->bigInteger('id_mitra')->unsigned();
-            // $table->foreign('id_mitra')->references('id')->on('mitra');
-
-            $table->timestamp('waktu_pesanan')->default(DB::raw('CURRENT_TIMESTAMP'));
-            $table->string('status', 255);
-            $table->decimal('harga_total', $precision = 8, $scale = 2);
-            $table->string('file', 255);
+            $table->id('id');
+            $table->bigInteger('id_user')->comment('{"src":"user.id"}')->nullable();
+            $table->bigInteger('id_produk')->comment('{"src":"produk.id"}')->nullable();
+            $table->bigInteger('id_cart')->comment('{"src":"cart.id"}')->nullable();
+            $table->timestamp('waktu_pesanan')->nullable();
+            $table->string('status', 255)->nullable();
+            $table->string('total', 255)->nullable();
+            $table->string('file', 255)->nullable();
+            $table->timestamps();
         });
     }
 

@@ -13,15 +13,16 @@ return new class extends Migration
     public function up(): void
     {
         Schema::create('mitra', function (Blueprint $table) {
-            $table->id('id_mitra');
-            $table->string('nama_mitra')->nullable();
+            $table->id('id');
+            $table->string('nama')->nullable();
             $table->string('email')->unique()->nullable();
-            $table->string('alamat_mitra')->nullable();
-            $table->string('no_telp_mitra')->nullable();
+            $table->string('alamat')->nullable();
+            $table->string('notelp')->nullable();
             
-            $table->timestamp('tanggal_daftar')->default(DB::raw('CURRENT_TIMESTAMP'));
+            $table->timestamp('tanggal_daftar');
             $table->timestamp('tanggal_selesai')->nullable();
             $table->string('status_mitra', 255);
+            $table->timestamps();
         });
     }
 
