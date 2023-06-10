@@ -49,7 +49,7 @@ class MitraController extends Controller
 
     public function edit($id)
     {
-        $mitra = DB::table('mitra')->where('id_mitra',$id)->get();
+        $mitra = DB::table('mitra')->where('id',$id)->get();
     
         return view('/list-mitra.detailmitra',['mitra' => $mitra[0]]);
      
