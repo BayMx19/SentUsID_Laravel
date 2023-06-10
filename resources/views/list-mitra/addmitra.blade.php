@@ -106,9 +106,9 @@
             teleponMitraInput.value = selectedTelepon;
             emailMitraInput.value = selectedEmail;
             document.querySelector('input[name="email"]').value = selectedEmail;
-            document.querySelector('input[name="nama_mitra"]').value = selectedUsername;
-            document.querySelector('input[name="alamat_mitra"]').value = selectedAlamat;
-            document.querySelector('input[name="telepon_mitra"]').value = selectedTelepon;
+            document.querySelector('input[name="nama"]').value = selectedUsername;
+            document.querySelector('input[name="alamat"]').value = selectedAlamat;
+            document.querySelector('input[name="telepon"]').value = selectedTelepon;
         });
 
         tglBergabungInput.addEventListener('change', function() {
