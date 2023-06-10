@@ -41,7 +41,7 @@
                                                             <td>{{ date('d-m-Y', strtotime($u->created_at)) }}
                                                             <td>{{ $u->user_role }}
                                                             <td>
-                                                                <a href="/detailusers/{{ $u->id_users }}"><button
+                                                                <a href="/detailusers/{{ $u->id }}"><button
                                                                         class="btn3 btn-primary"><svg
                                                                             xmlns="http://www.w3.org/2000/svg"
                                                                             width="16" height="16"
@@ -53,8 +53,8 @@
                                                                                 d="M8 5.5a2.5 2.5 0 1 0 0 5 2.5 2.5 0 0 0 0-5zM4.5 8a3.5 3.5 0 1 1 7 0 3.5 3.5 0 0 1-7 0z" />
                                                                         </svg></button></a>
                                                                 @if ($u->username != Auth::user()->username)
-                                                                    {{-- <a href="/list-pengguna/delete/{{ $u->id_users }}"> --}}
-                                                                    <a href="users/delete/{{ $u->id_users }}"
+                                                                    {{-- <a href="/list-pengguna/delete/{{ $u->id }}"> --}}
+                                                                    <a href="users/delete/{{ $u->id }}"
                                                                         data-confirm-delete="true">
                                                                         <button class="btn5">
                                                                             <svg xmlns="http://www.w3.org/2000/svg"

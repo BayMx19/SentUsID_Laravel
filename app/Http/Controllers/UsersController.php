@@ -43,7 +43,7 @@ class UsersController extends Controller
             'alamat' => $request->alamat,
             'deskripsi' => $request->deskripsi,
             'foto' => $request->foto,
-            'no_telp' => $request->no_telp,
+            'notelp' => $request->notelp,
         ]);
         // alihkan halaman ke halaman karya wan
         return redirect('/users')->with('success', 'Berhasil menambahkan User.');
@@ -52,7 +52,7 @@ class UsersController extends Controller
 
     public function edit($id)
     {
-        $users = DB::table('users')->where('id_users',$id)->get();
+        $users = DB::table('users')->where('id',$id)->get();
         $getroless = DB::table('role')->distinct()->get();
     
         return view('/list-pengguna.detailusers',['users' => $users[0], 'getroles' => $getroless]);
@@ -62,12 +62,12 @@ class UsersController extends Controller
         public function update(Request $request)
     {
         // return $request;
-         DB::table('users')->where('id_users',$request->id_users)->update([
+         DB::table('users')->where('id',$request->id)->update([
             'username' => $request->username,
             'email' => $request->email,
             'user_role' => $request->user_role,
             'alamat' => $request->alamat,
-            'no_telp' => $request->no_telp,
+            'notelp' => $request->notelp,
             'deskripsi' => $request->deskripsi,
             'foto' => $request->foto,
         ]);

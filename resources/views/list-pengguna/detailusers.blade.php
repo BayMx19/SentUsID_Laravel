@@ -43,9 +43,9 @@
                                                     <select class="form-select mb-5" name="user_role"
                                                     id="getroles">
 
-                                                    <option disabled selected>{{ $users->user_role }}</option>
+                                                    <option disabled selected >{{ $users->user_role }}</option>
                                                     @foreach ($getroles as $gr)
-                                                        <option name="getroles" value="{{ $gr->nama_role }}">{{ $gr->nama_role }}</option>
+                                                        <option name="getroles" value="{{ $gr->nama }}">{{ $gr->nama }}</option>
                                                     @endforeach
                                                 </select>
                                             </div>
@@ -59,8 +59,8 @@
                                             </div>
                                             <div class="form-group">
                                                 <label for="example-text-input" class="col-form-label">Nomor Telepon</label>
-                                                <input class="form-control " type="number" name="no_telp"
-                                                    value="{{ $users->no_telp }}" id="example-text-input">
+                                                <input class="form-control " type="text" name="no_telp"
+                                                    value="{{ $users->notelp }}" id="example-text-input">
                                             </div>
                                             <div class="form-group">
                                                 <input class="form-control " type="hidden" name="getroles"

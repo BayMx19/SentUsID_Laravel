@@ -44,7 +44,7 @@
                                                             <td>{{ $m->status_mitra }}
 
                                                             <td>
-                                                                <a href="/detailmitra/{{ $m->id_mitra }}"><button
+                                                                <a href="/detailmitra/{{ $m->id }}"><button
                                                                         class="btn3 btn-primary"><svg
                                                                             xmlns="http://www.w3.org/2000/svg"
                                                                             width="16" height="16"
@@ -55,7 +55,7 @@
                                                                             <path
                                                                                 d="M8 5.5a2.5 2.5 0 1 0 0 5 2.5 2.5 0 0 0 0-5zM4.5 8a3.5 3.5 0 1 1 7 0 3.5 3.5 0 0 1-7 0z" />
                                                                         </svg></button></a>
-                                                                <a href="/mitra/delete/{{ $m->id_mitra }}"><button
+                                                                <a href="/mitra/delete/{{ $m->id }}"><button
                                                                         class="btn5"><svg
                                                                             xmlns="http://www.w3.org/2000/svg"
                                                                             width="16" height="16"

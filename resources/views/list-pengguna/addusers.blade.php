@@ -50,7 +50,7 @@
 
                                                     <option disabled selected>Pilih Role</option>
                                                     @foreach ($getroles as $gr)
-                                                        <option name="getroles">{{ $gr->nama_role }}</option>
+                                                        <option name="getroles">{{ $gr->nama }}</option>
                                                     @endforeach
                                                 </select>
 
