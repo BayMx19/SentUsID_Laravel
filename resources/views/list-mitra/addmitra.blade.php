@@ -65,7 +65,7 @@
                                             </div>
                                             <div class="form-group">
                                                 <label for="status-input" class="col-form-label">Status Kemitraan</label>
-                                                <select class="form-control" id="status-input" name="status">
+                                                <select class="form-control" id="status-input" name="status_mitra">
                                                     <option disabled selected>Pilih Status</option>
                                                     <option value="Aktif">Aktif</option>
                                                     <option value="Tidak Aktif">Tidak Aktif</option>

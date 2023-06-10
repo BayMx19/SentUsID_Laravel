@@ -18,7 +18,7 @@ class MitraController extends Controller
 
     public function getEmail()
     {
-        $getEmail = DB::table('users')->select('username','email','alamat','no_telp')->where('user_role', 'admin')->get();
+        $getEmail = DB::table('users')->select('username','email','alamat','notelp')->where('user_role', 'admin')->get();
         
         return view('list-mitra.addmitra', ['getEmail' => $getEmail]);
     }
@@ -33,10 +33,10 @@ class MitraController extends Controller
         // return $request;
         // insert data ke table karyawan
        DB::table('mitra')->insert([
-            'nama_mitra' => $request->nama_mitra,
+            'nama' => $request->nama,
             'email' => $request->email,
-            'alamat_mitra' => $request->alamat_mitra,
-            'no_telp_mitra' => $request->no_telp_mitra,
+            'alamat' => $request->alamat,
+            'notelp' => $request->notelp,
             'tanggal_daftar' => $request->tanggal_daftar,
             'tanggal_selesai' => $request->tanggal_selesai,
             'status_mitra' => $request->status_mitra,
@@ -59,10 +59,10 @@ class MitraController extends Controller
     {
         // return $request;
          DB::table('mitra')->where('id_mitra',$request->id_mitra)->update([
-            'nama_mitra' => $request->nama_mitra,
+            'nama_mitra' => $request->nama,
             'email' => $request->email,
-            'alamat_mitra' => $request->alamat_mitra,
-            'no_telp_mitra' => $request->no_telp_mitra,
+            'alamat' => $request->alamat,
+            'notelp' => $request->notelp,
             'tanggal_daftar' => $request->tanggal_daftar,
             'tanggal_selesai' => $request->tanggal_selesai,
             'status_mitra' => $request->status_mitra,

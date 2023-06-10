@@ -31,8 +31,8 @@
 
                                             <div class="form-group">
                                                 <label for="example-text-input" class="col-form-label">Nama Mitra</label>
-                                                <input class="form-control" type="text" name="nama_mitra"
-                                                    value="{{ $mitra->nama_mitra }}" id="example-text-input">
+                                                <input class="form-control" type="text" name="nama"
+                                                    value="{{ $mitra->nama }}" id="example-text-input">
                                             </div>
                                             <div class="form-group">
                                                 <label for="example-text-input" class="col-form-label">Email</label>
@@ -41,13 +41,13 @@
                                             </div>
                                             <div class="form-group">
                                                 <label for="example-text-input" class="col-form-label">Alamat Mitra</label>
-                                                <input class="form-control" type="text" name="alamat_mitra"
-                                                    value="{{ $mitra->alamat_mitra }}" id="example-text-input">
+                                                <input class="form-control" type="text" name="alamat"
+                                                    value="{{ $mitra->alamat }}" id="example-text-input">
                                             </div>
                                             <div class="form-group">
                                                 <label for="example-text-input" class="col-form-label">Nomor Telepon</label>
-                                                <input class="form-control" type="text" name="no_telp_mitra"
-                                                    value="{{ $mitra->no_telp_mitra }}" id="example-text-input">
+                                                <input class="form-control" type="text" name="notelp"
+                                                    value="{{ $mitra->notelp }}" id="example-text-input">
                                             </div>
                                             <div class="form-group">
                                                 <label for="example-text-input" class="col-form-label">Tanggal
