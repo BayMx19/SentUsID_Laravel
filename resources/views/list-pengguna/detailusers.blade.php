@@ -43,15 +43,13 @@
                                                     <select class="form-select mb-5" name="user_role"
                                                     id="getroles">
 
-                                                    <option disabled selected >{{ $users->user_role }}</option>
+                                                    <option disabled selected>{{ $users->user_role }}</option>
                                                     @foreach ($getroles as $gr)
-                                                        <option name="getroles" value="{{ $gr->nama }}">{{ $gr->nama }}</option>
+                                                        <option name="getroles" value="{{ $gr->nama }}">{{ $gr->nama == $users->user_role ? 'selected' : '' }}</option>
                                                     @endforeach
                                                 </select>
+                                                <input type="hidden" name="user_role" value="{{ $users->user_role }}">
                                             </div>
-
-
-
                                             <div class="form-group">
                                                 <label for="example-text-input" class="col-form-label">Alamat</label>
                                                 <input class="form-control" type="text" name="alamat"
@@ -59,12 +57,8 @@
                                             </div>
                                             <div class="form-group">
                                                 <label for="example-text-input" class="col-form-label">Nomor Telepon</label>
-                                                <input class="form-control " type="text" name="no_telp"
+                                                <input class="form-control " type="text" name="notelp"
                                                     value="{{ $users->notelp }}" id="example-text-input">
-                                            </div>
-                                            <div class="form-group">
-                                                <input class="form-control " type="hidden" name="getroles"
-                                                    value="{{ $users->user_role }}" id="example-text-input">
                                             </div>
                                             <br>
                                             <div class="d-grid gap-2 col-6 mx-auto">
