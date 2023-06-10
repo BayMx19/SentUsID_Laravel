@@ -75,7 +75,7 @@ class UsersController extends Controller
     }
     public function delete($id)
         {
-            DB::table('users')->where('id_users', $id)->delete();
+            DB::table('users')->where('id', $id)->delete();
             return redirect('/users')->with('success', 'Berhasil hapus User.');
         }
     
