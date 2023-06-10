@@ -71,6 +71,7 @@
                                                     <option value="Aktif">Aktif</option>
                                                     <option value="Tidak Aktif">Tidak Aktif</option>
                                                 </select>
+                                                <input type="hidden" name="status_mitra" value="{{ $mitra->status_mitra }}">
                                             </div>
 
                                             <br>

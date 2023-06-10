@@ -58,8 +58,8 @@ class MitraController extends Controller
     public function update(Request $request)
     {
         // return $request;
-         DB::table('mitra')->where('id_mitra',$request->id_mitra)->update([
-            'nama_mitra' => $request->nama,
+         DB::table('mitra')->where('id',$request->id)->update([
+            'nama' => $request->nama,
             'email' => $request->email,
             'alamat' => $request->alamat,
             'notelp' => $request->notelp,
@@ -72,7 +72,7 @@ class MitraController extends Controller
 
     public function delete($id)
         {
-            DB::table('mitra')->where('id_mitra', $id)->delete();
+            DB::table('mitra')->where('id', $id)->delete();
             return redirect('/mitra')->with('success', 'Berhasil hapus Mitra.');
         }
 
