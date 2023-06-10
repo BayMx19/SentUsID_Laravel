@@ -31,25 +31,25 @@
                                                         <option value="{{ $ge->email }}"
                                                             data-username="{{ $ge->username }}"
                                                             data-alamat="{{ $ge->alamat }}"
-                                                            data-telepon="{{ $ge->no_telp }}">{{ $ge->email }}</option>
+                                                            data-telepon="{{ $ge->notelp }}">{{ $ge->email }}</option>
                                                     @endforeach
                                                 </select>
                                                 <input type="hidden" id="emailMitra" name="email">
                                             </div>
                                             <div class="form-group">
                                                 <label for="example-text-input" class="col-form-label">Nama Mitra</label>
-                                                <input class="form-control" type="text" id="namaMitra" name="nama_mitra"
+                                                <input class="form-control" type="text" id="namaMitra" name="nama"
                                                     value="" readonly>
                                             </div>
                                             <div class="form-group">
                                                 <label for="example-text-input" class="col-form-label">Alamat Mitra</label>
-                                                <input class="form-control" type="text" id="alamatMitra"
-                                                    name="alamat_mitra" readonly>
+                                                <input class="form-control" type="text" id="alamatMitra" name="alamat"
+                                                    readonly>
                                             </div>
                                             <div class="form-group">
                                                 <label for="example-text-input" class="col-form-label">Nomor Telepon</label>
-                                                <input class="form-control" type="text" id="teleponMitra"
-                                                    name="no_telp_mitra" readonly>
+                                                <input class="form-control" type="text" id="teleponMitra" name="notelp"
+                                                    readonly>
                                             </div>
                                             <div class="form-group">
                                                 <label for="example-text-input" class="col-form-label">Tanggal
@@ -65,7 +65,7 @@
                                             </div>
                                             <div class="form-group">
                                                 <label for="status-input" class="col-form-label">Status Kemitraan</label>
-                                                <select class="form-control" id="status-input" name="status_mitra">
+                                                <select class="form-control" id="status-input" name="status">
                                                     <option disabled selected>Pilih Status</option>
                                                     <option value="Aktif">Aktif</option>
                                                     <option value="Tidak Aktif">Tidak Aktif</option>

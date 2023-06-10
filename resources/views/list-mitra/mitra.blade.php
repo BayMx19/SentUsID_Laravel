@@ -37,7 +37,7 @@
                                                 <tbody>
                                                     @foreach ($mitra as $m)
                                                         <tr>
-                                                            <td>{{ $m->nama_mitra }}
+                                                            <td>{{ $m->nama }}
                                                             <td>{{ $m->email }}
                                                             <td>{{ date('d-m-Y', strtotime($m->tanggal_daftar)) }}
                                                             <td>{{ date('d-m-Y', strtotime($m->tanggal_selesai)) }}
