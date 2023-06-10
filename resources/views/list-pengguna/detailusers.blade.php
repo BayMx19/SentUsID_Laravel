@@ -45,7 +45,7 @@
 
                                                     <option disabled selected>{{ $users->user_role }}</option>
                                                     @foreach ($getroles as $gr)
-                                                        <option name="getroles" value="{{ $gr->nama }}">{{ $gr->nama == $users->user_role ? 'selected' : '' }}</option>
+                                                        <option name="getroles" value="{{ $gr->nama }}">{{ $gr->nama }}</option>
                                                     @endforeach
                                                 </select>
                                                 <input type="hidden" name="user_role" value="{{ $users->user_role }}">
