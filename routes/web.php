@@ -3,6 +3,7 @@
 use App\Http\Controllers\UsersController;
 use App\Http\Controllers\Auth\LoginController;
 use App\Http\Controllers\MitraController;
+use App\Http\Controllers\PesananController;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 
@@ -57,9 +58,8 @@ Route::middleware('superadmin')->group(function() {
     // END Route List Mitra
 // Start Route List Pesanan
 Route::middleware('admin')->group(function() {
-    Route::get('/pesanan', function(){
-        return view('list-pesanan.pesanan');
-    });
+    Route::get('/pesanan', [PesananController::class, 'index']);
+    Route::get('/pesanan', [PesananController::class, 'pesanan']);
 });
 // END Route List Pesanan
 // Start Route List Produk
