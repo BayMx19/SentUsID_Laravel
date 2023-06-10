@@ -549,7 +549,7 @@
         position: fixed;
         z-index: 99;
         right: 0;
-        background: #0068D5;;
+        /* background: #0068D5;; */
         padding: 14px;
         top: 20px;
         margin: 0;

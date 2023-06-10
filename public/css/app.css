@@ -1346,3 +1346,8 @@ a:hover {
 .modal-input {
   padding: 20px;
 }
+
+.swal2-confirm {
+  background-color: #005c97 !important; /* Ubah warna latar belakang tombol konfirmasi */
+  border-color: #005c97 !important; /* Ubah warna border tombol konfirmasi */
+}

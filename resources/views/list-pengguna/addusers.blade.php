@@ -25,28 +25,28 @@
                                             <div class="form-group">
                                                 <label for="example-text-input" class="col-form-label">Username</label>
                                                 <input class="form-control" type="text" value=""
-                                                    id="example-text-input" name="username">
+                                                    id="example-text-input" name="username" required>
                                             </div>
                                             <div class="form-group">
                                                 <label for="example-text-input" class="col-form-label">Email</label>
                                                 <input class="form-control" type="text" value=""
-                                                    id="example-text-input" name="email">
+                                                    id="example-text-input" name="email" required>
                                             </div>
                                             <div class="form-group">
                                                 <label for="example-text-input" class="col-form-label">Password</label>
                                                 <input class="form-control" type="password" value=""
-                                                    id="example-text-input" name="password">
+                                                    id="example-text-input" name="password" required>
                                             </div>
                                             <div class="form-group">
                                                 <label for="example-text-input" class="col-form-label">Password
                                                     Confirm</label>
                                                 <input class="form-control" type="password" value=""
-                                                    id="example-text-input" name="password-confirm">
+                                                    id="example-text-input" name="password-confirm" required>
                                             </div>
                                             <div class="form-group">
                                                 <label for="example-text-input" class="col-form-label">Role</label>
                                                 <select class="form-select mb-5" name="getroles" value=""
-                                                    id="getroles">
+                                                    id="getroles" required>
 
                                                     <option disabled selected>Pilih Role</option>
                                                     @foreach ($getroles as $gr)
@@ -90,4 +90,18 @@
         </div>
     </div>
 
+    <script>
+        var selectElement = document.getElementById('getroles');
+        var validationMessage = document.getElementById('validation-message');
+
+        // Menambahkan event listener pada perubahan nilai select
+        selectElement.addEventListener('change', function() {
+            // Mengecek apakah nilai select sudah dipilih
+            if (selectElement.value === '') {
+                validationMessage.style.display = 'block';
+            } else {
+                validationMessage.style.display = 'none';
+            }
+        });
+    </script>
 @endsection

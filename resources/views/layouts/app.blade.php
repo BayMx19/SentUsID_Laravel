@@ -118,7 +118,22 @@
                 title: 'Error',
                 text: "{{ session('toast_error') }}",
                 showConfirmButton: false,
-                timer: 3000
+                timer: 3000,
+                confirmButtonColor: '#005c97',
+            });
+        </script>
+    @endif
+
+    </script>
+    @if (session('success'))
+        <script>
+            Swal.fire({
+                icon: 'success',
+                title: 'Success',
+                text: "{{ session('success') }}",
+                showConfirmButton: true,
+                timer: 3000,
+                confirmButtonColor: '#005c97',
             });
         </script>
     @endif
