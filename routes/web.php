@@ -4,6 +4,7 @@ use App\Http\Controllers\UsersController;
 use App\Http\Controllers\Auth\LoginController;
 use App\Http\Controllers\MitraController;
 use App\Http\Controllers\PesananController;
+use App\Http\Controllers\ProdukController;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 
@@ -64,9 +65,16 @@ Route::middleware('admin')->group(function() {
 // END Route List Pesanan
 // Start Route List Produk
 Route::middleware('admin')->group(function() {
-    Route::get('/produk', function(){
-        return view('list-produk.produk');
-    });
+    Route::get('/produk', [ProdukController::class, 'index']);
+    Route::get('/produk', [ProdukController::class, 'produk']);
+
+    Route::get('/add-produk', [ProdukController::class, 'addProduk']);
+    Route::post('/add-produk/store', [ProdukController::class, 'input']);
+
+    Route::get('/detailproduk/{id}','App\Http\Controllers\MitraController@edit');
+    Route::post('/list-produk/update/{id}', [ProdukController::class, 'update']);
+
+    Route::get('/mitra/delete/{id}', [ProdukController::class, 'delete']);
 });
 // END Route List Produk
 // Start Route List Toko
