@@ -1630,3 +1630,13 @@ table.dataTable thead td {
   a {
     color: #00337C !important;
   }
+
+  .card-produk{
+    background-color: #fff;
+    position: relative;
+    height: 250px;
+    width: 150px;
+    border-radius: 10px;
+    border: 1px solid #005C97;
+    margin: 10px !important;
+  }
