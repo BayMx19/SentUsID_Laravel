@@ -22,14 +22,13 @@ class ProdukController extends Controller
     {
         // return $request;
         // insert data ke table karyawan
-       DB::table('pesanan')->insert([
-            'id_user' => $request->id_user,
-            'id_produk' => $request->id_produk,
-            'id_cart' => $request->id_cart,
-            'waktu_pesanan' => $request->waktu_pesanan,
-            'status' => $request->status,
-            'total' => $request->total,
-            'file' => $request->status_file,
+       DB::table('produk')->insert([
+            'nama' => $request->nama,
+            'harga' => $request->harga,
+            'gambar' => $request->gambar,
+            'deskripsi' => $request->deskripsi,
+            'jenis' => $request->jenis,
+            'ukuran' => $request->ukuran,
         ]);
         // alihkan halaman ke halaman karya wan
         return redirect('/produk')->with('success', 'Berhasil menambahkan produk.');
@@ -47,15 +46,13 @@ class ProdukController extends Controller
 
     public function update(Request $request)
     {
-        // return $request;
-         DB::table('mitra')->where('id',$request->id)->update([
-            'id_user' => $request->id_user,
-            'id_produk' => $request->id_produk,
-            'id_cart' => $request->id_cart,
-            'waktu_pesanan' => $request->waktu_pesanan,
-            'status' => $request->status,
-            'total' => $request->total,
-            'file' => $request->status_file,
+        DB::table('produk')->where('id',$request->id)->update([
+            'nama' => $request->nama,
+            'harga' => $request->harga,
+            'gambar' => $request->gambar,
+            'deskripsi' => $request->deskripsi,
+            'jenis' => $request->jenis,
+            'ukuran' => $request->ukuran,
         ]);
         return redirect('/produk')->with('success', 'Berhasil edit produk.');
     }
