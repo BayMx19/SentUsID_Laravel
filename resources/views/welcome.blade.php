@@ -432,8 +432,8 @@
         }
 
         .a {
-            text-decoration: none;
-            color: white;
+            text-decoration: none !important;
+            color: white !important;
         }
 
         @media (max-width:900px) {

@@ -82,7 +82,7 @@ position:absolute;
 }
 .card {
  border: none !important;
- border-radius: 12px !important;
+ border-radius: 1rem !important;
  background-color: #fff !important;
  -webkit-transition: all 0.3s ease 0s;
  transition: all 0.3s ease 0s;
@@ -94,8 +94,7 @@ position:absolute;
 }
 
 .card-body {
- padding: 25.6px;
- padding: 1.6rem; 
+ padding: 2rem !important; 
 }
 
 .card-body2 {
@@ -788,12 +787,12 @@ p.card-text {
 
 .form-control {
  font-size: 14px;
- border: 1px solid #005C97;
+ border: 1px solid #005C97 !important;
 width: 100%;
 height: 40px;
 margin-bottom: 15px;
 padding: 0 15px !important;
- border-radius: 12px;
+ border-radius: 12px !important;
 }
 
 .form-select {
@@ -962,6 +961,7 @@ label {
 .table th {
     padding: 0.25rem;
     background-color: #005C97 !important;
+    color: white !important;
 }
 
 table tr th {
@@ -993,6 +993,10 @@ table tr {
  display: inline-block;
  text-transform: capitalize;
  vertical-align: middle;
+}
+
+table.dataTable thead th, table.dataTable thead td {
+  border-bottom: none !important;
 }
 
 /*-------------------- END Table Basic ------------------- */
@@ -1652,4 +1656,23 @@ table.dataTable thead td {
 
   .col-sm-4 {
     /* padding: 0px !important; */
+  }
+
+  .button-tambah {
+    width: auto;
+    height: 35px !important;
+    background-color: #005C97 !important;
+    color: white !important;
+    border-radius: 10px !important;
+    border: 2px solid transparent !important;
+    padding: 0px 20px !important;
+  }
+  .button-tambah:hover {
+    background-color: white !important;
+    color: #005C97 !important;
+    border: 2px solid #005C97 !important;
+  }
+
+  tr th .text-white {
+    color: white !important;
   }
