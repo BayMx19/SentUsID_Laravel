@@ -11,8 +11,8 @@
                         <div class="card-body">
                             <h1 class="header-title">List Produk Toko
                                 {{ Auth::user()->username }}</h1>
-                            <div class="button-tambah">
-                                <a href="{{ '/add-produk' }}"><button class="btn btn-primary" style="float:right;">Tambah
+                            <div class="">
+                                <a href="{{ '/add-produk' }}"><button class="button-tambah" style="float:right;">Tambah
                                         Produk</button></a>
                                 <br>
                             </div>
