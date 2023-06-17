@@ -1676,3 +1676,9 @@ table.dataTable thead td {
   tr th .text-white {
     color: white !important;
   }
+
+  .card-img-top {
+    width: 100% !important;
+    height: 50% !important;
+    border-radius: 12px !important;
+  }
