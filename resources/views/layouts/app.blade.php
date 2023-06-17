@@ -13,11 +13,12 @@
     <link rel="stylesheet" type="text/css" href="css/style.css">
     {{-- <link rel="stylesheet" type="text/css" href="css/app.css"> --}}
     <link rel="stylesheet" type="text/css" href="css/default-css.css">
-    <link rel="stylesheet" type="text/css" href="css/metisMenu.css">
-    <link rel="stylesheet" type="text/css" href="css/slicknav.min.css">
+    {{-- <link rel="stylesheet" type="text/css" href="css/metisMenu.css"> --}}
+    {{-- <link rel="stylesheet" type="text/css" href="css/slicknav.min.css"> --}}
 
     <link rel="stylesheet" type="text/css" href="css/font-awesome.min.css">
     <link rel="stylesheet" href="css/typography.css">
+
     <link rel="stylesheet" href="css/responsive.css">
 
     <!-- Fonts -->
@@ -33,6 +34,8 @@
     <link rel="stylesheet"
         href="http://cdn.datatables.net/plug-ins/a5734b29083/integration/bootstrap/3/dataTables.bootstrap.css" />
     <link rel="stylesheet" href="http://cdn.datatables.net/responsive/1.0.2/css/dataTables.responsive.css" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
 
 
     <style>
@@ -69,12 +72,13 @@
 
     </div>
 
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous">
+    </script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
         integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous">
     </script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js"
-        integrity="sha384-mQ93GR66B00ZXjt0YO5KlohRA5SY2XofN4zfuZxLkoj1gXtW8ANNCe9d5Y3eG5eD" crossorigin="anonymous">
-    </script>
+
     <script>
         $(document).ready(function() {
             $('#myDatausers').DataTable({
