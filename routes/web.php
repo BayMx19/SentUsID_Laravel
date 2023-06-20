@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\AkunController;
 use App\Http\Controllers\UsersController;
 use App\Http\Controllers\Auth\LoginController;
 use App\Http\Controllers\MitraController;
@@ -29,9 +30,9 @@ Auth::routes();
 Route::get('/logout', [LoginController::class, 'logout']);
 
 // Start Route Akun
-Route::get('/akun', function(){
-    return view('akun');
-});
+Route::get('/akun', [AkunController::class, 'index']);
+Route::get('/detailakun/{id}',[AkunController::class, 'edit'])->name('edit');
+Route::post('/info-akun/update/{id}', [AkunController::class, 'update']);
 // END Route Akun
 
 // Start Route History
@@ -71,7 +72,7 @@ Route::middleware('admin')->group(function() {
     Route::get('/add-produk', [ProdukController::class, 'addProduk']);
     Route::post('/add-produk/store', [ProdukController::class, 'input']);
 
-    Route::get('/detailproduk/{id}','App\Http\Controllers\MitraController@edit');
+    Route::get('/detailproduk/{id}','App\Http\Controllers\ProdukController@edit');
     Route::post('/list-produk/update/{id}', [ProdukController::class, 'update']);
 
     Route::get('/mitra/delete/{id}', [ProdukController::class, 'delete']);

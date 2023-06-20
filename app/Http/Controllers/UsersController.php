@@ -73,6 +73,7 @@ class UsersController extends Controller
         ]);
         return redirect('/users')->with('success', 'Berhasil edit User.');
     }
+
     public function delete($id)
         {
             DB::table('users')->where('id', $id)->delete();

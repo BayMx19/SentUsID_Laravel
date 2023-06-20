@@ -10,6 +10,12 @@
                     <div class="card">
                         <div class="card-body">
                             <h1 class="header-title">Informasi Akun</h4>
+                            @if (Auth::user()->user_role !== 'SuperAdmin')
+                            <div class="">
+                                    <a href="{{ route('edit', ['id' => Auth::user()->id]) }}"><button class="btn button-tambah"
+                                            style="float:right;">Edit Akun</button></a> <br>
+                                </div>
+                                @endif
 
                                 <div class="form-group">
                                     <label for="example-text-input" class="col-form-label">Nama</label>
@@ -38,9 +44,16 @@
                                     </div>
                                     <div class="form-group">
                                         <label for="example-text-input" class="col-form-label">No. Telpon</label>
-                                        <input class="form-control" type="text" value="{{ Auth::user()->no_telp }}"
+                                        <input class="form-control" type="text" value="{{ Auth::user()->notelp }}"
                                             id="example-text-input" disabled readonly oncopy="return false;"
                                             onpaste="return false;">
+                                    </div>
+                                    <div class="mb-3">
+                                        <label for="formFileSm" class="form-label">Foto Profil</label></br>
+                                        @if(Auth::user()->foto)
+                                        <img src="/storage/akun/{{ Auth::user()->foto }}" alt="profil">
+                                        @else
+                                        <p>Tidak ada foto</p>
                                     </div>
                                 @endif
 

@@ -59,9 +59,12 @@
                                             <div class="form-group">
                                                 <label for="example-text-input" class="col-form-label">Tanggal
                                                     Selesai</label>
-                                                <input class="form-control " type="date" name="tanggal_daftar"
+                                                <input class="form-control " type="date" name="tanggal_selesai"
                                                     value="{{ date('Y-m-d', strtotime($mitra->tanggal_selesai)) }}"
                                                     id="tgl-selesai-input" disabled>
+                                                    <input type="hidden" name="tanggal_selesai"
+                                                    value="{{ date('Y-m-d', strtotime($mitra->tanggal_selesai)) }}"
+                                                    id="tgl-selesai-input">
                                             </div>
                                             <div class="form-group">
                                                 <label for="status-input" class="col-form-label">Status Kemitraan</label>
@@ -71,7 +74,7 @@
                                                     <option value="Aktif">Aktif</option>
                                                     <option value="Tidak Aktif">Tidak Aktif</option>
                                                 </select>
-                                                <input type="hidden" name="status_mitra" value="{{ $mitra->status_mitra }}">
+                                                <!-- <input type="hidden" name="status_mitra" value="{{ $mitra->status_mitra }}"> -->
                                             </div>
 
                                             <br>

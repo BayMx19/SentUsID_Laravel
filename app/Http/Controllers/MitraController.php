@@ -18,7 +18,7 @@ class MitraController extends Controller
 
     public function getEmail()
     {
-        $getEmail = DB::table('users')->select('username','email','alamat','notelp')->where('user_role', 'admin')->get();
+        $getEmail = DB::table('users')->select('username','email','alamat','notelp')->where('user_role', 'User')->get();
         
         return view('list-mitra.addmitra', ['getEmail' => $getEmail]);
     }
@@ -30,6 +30,9 @@ class MitraController extends Controller
 
     public function input(Request $request)
     {
+        $email = $request->getEmail; 
+        $userRole = $request->user_role; 
+        
         // return $request;
         // insert data ke table karyawan
        DB::table('mitra')->insert([
@@ -40,6 +43,9 @@ class MitraController extends Controller
             'tanggal_daftar' => $request->tanggal_daftar,
             'tanggal_selesai' => $request->tanggal_selesai,
             'status_mitra' => $request->status_mitra,
+        ]);
+        DB::table('users')->where('email', $email)->update([
+            'user_role' => $userRole,
         ]);
         // alihkan halaman ke halaman karya wan
         return redirect('/mitra')->with('success', 'Berhasil menambahkan mitra.');

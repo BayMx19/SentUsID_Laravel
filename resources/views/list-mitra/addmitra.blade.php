@@ -71,6 +71,8 @@
                                                     <option value="Tidak Aktif">Tidak Aktif</option>
                                                 </select>
                                             </div>
+                                            <input type="hidden" class="form-control form-login mt-2" id="user_role"
+                                            name="user_role" value="Admin" required>
                                             <br>
                                             <div class="d-grid gap-2 col-6 mx-auto">
                                                 <button type="submit" class="btn4 btn-primary">Simpan</button>

@@ -48,7 +48,7 @@
                                                         <option name="getroles" value="{{ $gr->nama }}">{{ $gr->nama }}</option>
                                                     @endforeach
                                                 </select>
-                                                <input type="hidden" name="user_role" value="{{ $users->user_role }}">
+                                                <input type="hidden" name="user_role" id="hidden_user_role" value="{{ $users->user_role }}">
                                             </div>
                                             <div class="form-group">
                                                 <label for="example-text-input" class="col-form-label">Alamat</label>
@@ -73,5 +73,20 @@
             </div>
         </div>
     </div>
+
+    <script>
+    // Mendapatkan referensi elemen dropdown dan input hidden
+    var dropdown = document.getElementById("getroles");
+    var hiddenInput = document.getElementById("hidden_user_role");
+
+    // Menambahkan event listener untuk mengubah nilai input hidden ketika dropdown berubah
+    dropdown.addEventListener("change", function() {
+        // Mengatur nilai input hidden sesuai dengan nilai yang dipilih di dropdown
+        hiddenInput.value = dropdown.value;
+    });
+
+    // Inisialisasi nilai input hidden saat halaman dimuat
+    hiddenInput.value = dropdown.value;
+</script>
 
 @endsection
