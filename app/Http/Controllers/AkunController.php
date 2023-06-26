@@ -34,6 +34,6 @@ $request->foto->storeAs('akun', $imageName, 'public');
             'deskripsi' => $request->deskripsi,
             'foto' => 'akun/' . $request->foto->hashName(),
         ]);
-        return redirect()->route('akun')->with('success', 'Berhasil edit Akun.');
+        return redirect('/acc')->with('success', 'Berhasil edit Akun.');
     }
 }

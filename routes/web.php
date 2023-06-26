@@ -32,7 +32,7 @@ Route::get('/logout', [LoginController::class, 'logout']);
 // Start Route Akun
 // Route::get('/akun', [AkunController::class, 'index'])->name('index');
 
-Route::get('akun', function(){
+Route::get('/acc', function(){
     return view('info-akun.akun');
 });
 Route::get('/detailakun/{id}',[AkunController::class, 'edit'])->name('edit');
