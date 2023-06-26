@@ -30,7 +30,11 @@ Auth::routes();
 Route::get('/logout', [LoginController::class, 'logout']);
 
 // Start Route Akun
-Route::get('/akun', [AkunController::class, 'index']);
+// Route::get('/akun', [AkunController::class, 'index'])->name('index');
+
+Route::get('akun', function(){
+    return view('info-akun.akun');
+});
 Route::get('/detailakun/{id}',[AkunController::class, 'edit'])->name('edit');
 Route::post('/info-akun/update/{id}', [AkunController::class, 'update']);
 // END Route Akun
@@ -141,7 +145,3 @@ Route::middleware(['checkUserRole'])->group(function () {
 
 
 // SELESAI SEMOGA HARIMU SENIN TERUS, KEJARLAH CITA-CITAMU JANGAN KEJAR YANG GA CINTAIMU
-
-
-
-
