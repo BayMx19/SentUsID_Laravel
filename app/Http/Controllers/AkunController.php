@@ -24,7 +24,7 @@ class AkunController extends Controller
         // dd($request->all());
 
         //uploud image
-        $imageName = time().'.'.$request->foto->hashName();;
+        $imageName = $request->foto->hashName();;
 $request->foto->storeAs('akun', $imageName, 'public');
          DB::table('users')->where('id',$request->id)->update([
             'username' => $request->username,
