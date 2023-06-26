@@ -54,6 +54,7 @@
                                         <img src="/storage/akun/{{ Auth::user()->foto }}" alt="profil">
                                         @else
                                         <p>Tidak ada foto</p>
+                                        @endif
                                     </div>
                                 @endif
 
