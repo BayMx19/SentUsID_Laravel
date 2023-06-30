@@ -29,7 +29,7 @@ class ProdukController extends Controller
         // dd($request->all());
         
         $request->validate([
-            'gambar' => 'mimes:jpg.png,jpeg',
+            'gambar' => 'mimes:jpg,png,jpeg',
         ]);
 
         //uploud image

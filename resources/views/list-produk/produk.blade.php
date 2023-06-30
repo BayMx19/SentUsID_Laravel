@@ -17,8 +17,8 @@
                                 <br>
                             </div>
 
-                            @foreach ($produk as $p)
                             <div class="row mt-5 mb-3">
+                                @foreach ($produk as $p)
                                 <div class="col-sm-4">
                                     <div class="card" style="width: 18rem;">
                                         <div class="card-body card-produk">
@@ -28,7 +28,7 @@
                                         </div>
                                     </div>
                                 </div>
-                            @endforeach
+                                @endforeach
 
                             </div>
                         </div>
