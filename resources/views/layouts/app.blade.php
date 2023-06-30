@@ -98,6 +98,19 @@
     </script>
     <script>
         $(document).ready(function() {
+            $('#myDatajenis').DataTable({
+                "columns": [
+                    null,
+                    {
+                        orderable: false
+                    },
+                ],
+                "searching": false,
+            });
+        });
+    </script>
+    <script>
+        $(document).ready(function() {
             $('#myDatamitra').DataTable({
                 "searching": false,
                 "columns": [

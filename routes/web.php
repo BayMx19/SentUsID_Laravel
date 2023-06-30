@@ -3,6 +3,7 @@
 use App\Http\Controllers\AkunController;
 use App\Http\Controllers\UsersController;
 use App\Http\Controllers\Auth\LoginController;
+use App\Http\Controllers\JenisController;
 use App\Http\Controllers\MitraController;
 use App\Http\Controllers\PesananController;
 use App\Http\Controllers\ProdukController;
@@ -109,6 +110,12 @@ Route::middleware('superadmin')->group(function() {
 
     Route::get('/users/delete/{id}', [UsersController::class, 'delete']);
     Route::get('users',[UsersController::class, 'pengguna'])->name('users');
+
+    // Route::get('/jenis', [JenisController::class, 'index']);
+    Route::get('/jenis', [JenisController::class, 'jenis']);
+    Route::get('/add-jenis', [JenisController::class, 'addJenis']);
+
+
 });
 
 // END Route List Pengguna
