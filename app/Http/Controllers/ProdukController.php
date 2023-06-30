@@ -26,15 +26,21 @@ class ProdukController extends Controller
     }
     public function input(Request $request)
     {
-        // return $request;
-        // insert data ke table karyawan
-       DB::table('produk')->insert([
+        // dd($request->all());
+        
+        $request->validate([
+            'gambar' => 'mimes:jpg.png,jpeg',
+        ]);
+
+        //uploud image
+        $imageName = $request->gambar->hashName();
+        $request->gambar->storeAs('produk', $imageName, 'public');
+        DB::table('produk')->insert([
             'nama' => $request->nama,
             'harga' => $request->harga,
-            'gambar' => $request->gambar,
+            'gambar' => 'produk/' . $request->gambar->hashName(),
             'deskripsi' => $request->deskripsi,
             'jenis' => $request->jenis,
-            'ukuran' => $request->ukuran,
         ]);
         // alihkan halaman ke halaman karya wan
         return redirect('/produk')->with('success', 'Berhasil menambahkan produk.');

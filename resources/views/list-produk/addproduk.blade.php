@@ -19,7 +19,7 @@
                                                     d="M15 8a.5.5 0 0 0-.5-.5H2.707l3.147-3.146a.5.5 0 1 0-.708-.708l-4 4a.5.5 0 0 0 0 .708l4 4a.5.5 0 0 0 .708-.708L2.707 8.5H14.5A.5.5 0 0 0 15 8z" />
                                             </svg></a> Add Produk</h4>
 
-                                        <form method="POST" action="/add-produk/store">
+                                        <form method="POST" action="/add-produk/store" enctype="multipart/form-data">
                                             {{ csrf_field() }}
 
                                             <div class="form-group">
@@ -52,7 +52,7 @@
 
                                             <div class="mb-3">
                                                 <label for="formFileSm" class="form-label">Gambar</label>
-                                                <input class="form-control form-control-sm" id="formFileSm" name="foto"
+                                                <input class="form-control form-control-sm" id="formFileSm" name="gambar"
                                                     type="file">
                                             </div>
                                             <br>
