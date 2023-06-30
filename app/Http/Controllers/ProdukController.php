@@ -15,6 +15,12 @@ class ProdukController extends Controller
         return view('list-produk.produk',['produk'=>$produk]);
     }
 
+    public function getJenis() {
+        $getjenis = DB::table('jenis')->distinct()->get();
+        return view ('list-produk.addproduk',['getjenis'=>$getjenis]);
+        
+    }
+
     public function addProduk() {
         return view('list-produk.addproduk');
     }
@@ -46,13 +52,21 @@ class ProdukController extends Controller
 
     public function update(Request $request)
     {
+        dd($request->all());
+
+        $request->validate([
+            'gambar' => 'mimes:jpg.png,jpeg',
+        ]);
+
+        //uploud image
+        $imageName = $request->gambar->hashName();;
+        $request->gambar->storeAs('produk', $imageName, 'public');
         DB::table('produk')->where('id',$request->id)->update([
             'nama' => $request->nama,
             'harga' => $request->harga,
-            'gambar' => $request->gambar,
+            'gambar' => 'produk/' . $request->gambar->hashName(),
             'deskripsi' => $request->deskripsi,
             'jenis' => $request->jenis,
-            'ukuran' => $request->ukuran,
         ]);
         return redirect('/produk')->with('success', 'Berhasil edit produk.');
     }

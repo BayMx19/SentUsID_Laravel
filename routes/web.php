@@ -79,6 +79,8 @@ Route::middleware('admin')->group(function() {
     Route::get('/detailproduk/{id}','App\Http\Controllers\ProdukController@edit');
     Route::post('/list-produk/update/{id}', [ProdukController::class, 'update']);
 
+    Route::get('/add-produk', [ProdukController::class, 'getJenis']);
+
     Route::get('/mitra/delete/{id}', [ProdukController::class, 'delete']);
 });
 // END Route List Produk

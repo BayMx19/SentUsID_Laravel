@@ -39,6 +39,17 @@
                                                     id="deskripsi-input" name="deskripsi">
                                             </div>
 
+                                            <div class="form-group">
+                                                <label for="example-text-input" class="col-form-label">Jenis Cetak</label>
+                                                <select class="form-control form-select mb-5" name="getjenis" value=""
+                                                    id="getjenis" required>
+                                                    <option disabled selected>Pilih Jenis Cetakan</option>
+                                                    @foreach ($getjenis as $gj)
+                                                        <option name="getjenis">{{ $gj->jenisCetak }}</option>
+                                                    @endforeach
+                                                </select>
+                                            </div>
+
                                             <div class="mb-3">
                                                 <label for="formFileSm" class="form-label">Gambar</label>
                                                 <input class="form-control form-control-sm" id="formFileSm" name="foto"
