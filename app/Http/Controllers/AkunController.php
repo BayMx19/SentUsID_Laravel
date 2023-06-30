@@ -23,6 +23,10 @@ class AkunController extends Controller
     {
         // dd($request->all());
 
+        $request->validate([
+            'foto' => 'mimes:jpg.png,jpeg',
+        ]);
+
         //uploud image
         $imageName = $request->foto->hashName();;
 $request->foto->storeAs('akun', $imageName, 'public');

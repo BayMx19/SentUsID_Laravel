@@ -51,8 +51,8 @@
                                     <div class="mb-3">
                                         <label for="formFileSm" class="form-label">Foto Profil</label></br>
                                         @if (Auth::user()->foto)
-                                            <img src="/public/storage/{{ Auth::user()->foto }}" alt="profil">
-                                            <img src="/public/storage/{{ Auth::user()->foto }}" alt="profil">
+                                            <img src="{{ asset('storage/' . Auth::user()->foto) }}" alt="profil">
+                                            <!-- <img src="/public/storage/{{ Auth::user()->foto }}" alt="profil"> -->
                                         @else
                                             <p>Tidak ada foto</p>
                                         @endif

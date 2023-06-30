@@ -54,8 +54,10 @@
                                         </div>
                                         <div class="mb-3">
                                             <label for="formFileSm" class="form-label">Foto Profil</label>
-                                            <input class="form-control form-control-sm" id="formFileSm" name="foto"
-                                                type="file">
+                                            <input class="form-control form-control-sm" id="formFileSm" name="foto" type="file">
+                                            @if($errors->has('foto'))
+                                                <span class="text-danger">{{ $errors->first('foto') }}</span>
+                                            @endif
                                         </div>
                                     @endif
                                     <br>
