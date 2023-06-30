@@ -22,6 +22,8 @@
                                     <table class="table datatable-primary text-center myDatajenis display" id="myDatajenis">
                                         <thead class="text-uppercase bg-primary">
                                             <tr class="text-white">
+                                                <th scope="col">No.</th>
+
                                                 <th scope="col">Jenis Cetak</th>
                                                 <th scope="col" class="no-sort">Action</th>
                                             </tr>
@@ -29,6 +31,7 @@
                                         <tbody>
                                             @foreach ($jenis as $j)
                                                 <tr>
+                                                    <td>{{ $j->id }}</td>
                                                     <td>{{ $j->jenisCetak }}
 
                                                     <td>
