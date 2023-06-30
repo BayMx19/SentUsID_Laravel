@@ -114,6 +114,7 @@ Route::middleware('superadmin')->group(function() {
     // Route::get('/jenis', [JenisController::class, 'index']);
     Route::get('/jenis', [JenisController::class, 'jenis']);
     Route::get('/add-jenis', [JenisController::class, 'addJenis']);
+    Route::get('/add-jenis/store', [JenisController::class, 'input']);
 
 
 });
