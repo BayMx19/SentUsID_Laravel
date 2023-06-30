@@ -25,12 +25,12 @@
                                             <div class="form-group">
                                                 <label for="example-text-input" class="col-form-label">Nama Produk</label>
                                                 <input class="form-control" type="text" value=""
-                                                    id="example-text-input" name="username" required>
+                                                    id="example-text-input" name="nama" required>
                                             </div>
                                             <div class="form-group">
                                                 <label for="example-text-input" class="col-form-label">Harga Produk</label>
                                                 <input class="form-control" type="text" value=""
-                                                    id="example-text-input" name="email" required>
+                                                    id="example-text-input" name="harga" required>
                                             </div>
                                             
                                             <div class="form-group">
@@ -41,7 +41,7 @@
 
                                             <div class="form-group">
                                                 <label for="example-text-input" class="col-form-label">Jenis Cetak</label>
-                                                <select class="form-control form-select mb-5" name="getjenis" value=""
+                                                <select class="form-control form-select mb-5" name="jenis" value=""
                                                     id="getjenis" required>
                                                     <option disabled selected>Pilih Jenis Cetakan</option>
                                                     @foreach ($getjenis as $gj)

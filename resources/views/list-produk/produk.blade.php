@@ -22,9 +22,9 @@
                                 <div class="col-sm-4">
                                     <div class="card" style="width: 18rem;">
                                         <div class="card-body card-produk">
-                                            <img src="img/tes.JPG" class="card-img-top" alt="...">
-                                            <p class="card-text">Some quick example text to build on the card title and make
-                                                up the bulk of the card's content.</p>
+                                            <img src="{{ asset('storage/' . $p->gambar) }}" class="card-img-top" alt="...">
+                                            <span>{{ $p->nama }}</span></br>
+                                            <span>Rp {{ $p->harga }}</span>
                                         </div>
                                     </div>
                                 </div>
